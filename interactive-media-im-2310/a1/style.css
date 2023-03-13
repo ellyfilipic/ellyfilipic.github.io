@@ -5,4 +5,15 @@ html{
 
 h1{
     color: blue;
+    text-align: center;
+}
+
+
+h2{
+  color: blueviolet;
+  text-align: center;
+}
+
+h3{
+  text-align: center;
 }
