@@ -1,19 +1,111 @@
+
+/*
+Due to the cascade and specificity (see The Cascade section of the worksheet) I tend 
+to organise my CSS files in an order that reflects this with element selectors at the 
+top, followed by classes and then ids. In more complex projects I sometimes change this 
+and instead orgainse the CSS by how they are laid out on the page/s.
+*/
+
+/* 
+This is a selector I didn't cover in the worksheet but * refers to all elements.
+if we place it first like this it will override some of the browser's default style but 
+won't mess with any of the custom rules I apply below it. Whatver is in the curly brackets applies
+to all elements in the html
+EG: *{
+  padding
+  margin
+  colour
+  bordebox
+} 
+*/
+
+
+*{
+  font-family: 'Montserrat Alternates', sans-serif;
+ 
+}
+
+
 html{
-    background-color: rgb(244, 244, 244);
+    background-color: rgb(0, 0, 0);
+
 }
 
 
 h1{
     color: blue;
     text-align: center;
+    font-size: 45px;
+    font-weight: 900;
 }
+
+
 
 
 h2{
   color: blueviolet;
   text-align: center;
+  font-size: 24px;
+  padding: 3%;
 }
+
+
+
+
 
 h3{
   text-align: center;
+font-size: 25px;
+color: blue;
+margin-top: 3%;
+padding-top: 3%;
+
+}
+
+
+h4{
+  color: black;
+  font-weight: 800;
+  padding-left: 3%;
+
+}
+
+
+p{
+  color: rgb(127, 127, 127);
+  padding-bottom: 3%;
+  font-size: 24px;
+}
+
+
+
+.styling-for-letterhead{
+  color: blue;
+  font-size: 90px;
+}
+
+
+
+
+.background-color-for-content{
+  background-color: beige;
+}
+
+
+
+p1{
+  color: black;
+}
+
+
+p2{
+ color: black;
+}
+
+
+
+bdi{
+  color: black; 
+  font-size: 25px; 
+  font-weight: 700;
 }
