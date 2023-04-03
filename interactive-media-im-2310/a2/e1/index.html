@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-    <!--when browser reads this page, this tag tells the browser that is a html document and has to be rendered as an html structure. it won't appear to users-->
 
-    <!-- HTML tag is a container. html is about container (html ,head, body) and lang defines the language you are writing in, which is useful for audible version
-    of the website for deaf-->
 <html lang="en">
 
 
 
        <head> 
-            <!-- the head tag refers to all medadata of the page. wont be shown on the window or website, but gives instructions to the browser about metadata
-        referred to the website (such as links, css docs, javascript docs, google fonts links....). space margin on the left helps remember that head is in container htmml-->
-    
+
+        <title>Exercise 1 Assignment 2</title>
 
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
                 <!--character set explains what sort of letter, numbers, symbols you will include in the website and utf 8 encodes most of them
@@ -20,27 +16,47 @@
        
         <link rel="stylesheet" href="style.css">
 
-
-          <script src="script.js"></script>
-                    <!--to link js docs, use script tag instead of link tag. used specifically for js, thats why we dont have to specify its a javascript, browser recognises what it is by using script tag-->
-       
-
+        <script src="script.js"></script>
+        
     </head>
 
 
 
 
+<!--Layout inspired by reference image "The Incal 3 - page 3"-->
+<body>
+
+    <h1>Exercise 1 Assignment 2 - s3955980</h1>
+
+<div>
+    <!-- First large html box from the top (in the background, )-->
+    <div id="box-a"></div>
+    <!-- large box in the background, behind all boxes, length = all page,-->
+    <div id="box-b"></div>
 
 
-    <body>
+    <div class="container">
+         <!-- row of 3 boxes, overlay on the first one-->
+            <div class="box-row">   
+            <div id="box2"></div>
+            <div id="box3"></div>
+            <div id="box4"></div>
+            <div id="box6"></div>   <!-- box on the left,in the foreground-->
+            <div id="box7"></div>   <!-- box on the right,in the foreground-->
+    </div>
 
-        <h1>This is the first heading</h1>
-
-
-
-
+<!--small blue box, below the first row of boxes-->
+    <div id="box5"></div>
+<!-- second small rectangle in the background-->
+    <div id="box5-a"></div>
+</div>
 
 
 </body>
 
+
+
+
+
 </html>
+

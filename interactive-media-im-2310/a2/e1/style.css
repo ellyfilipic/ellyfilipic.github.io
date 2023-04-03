@@ -1,8 +1,216 @@
+
+/* I am taking inspiration for this exercise from:
+- glitch art and pop art (for colour palette of the webpage) 
+- geometric art and Bauhaus design (chosen as inspiration for shapes. layout and other visual elements).
+These art references also give me the chance to experiment with coding techniques in my webpage layout (such gradients, filters, boxes, box-shadows, borders). 
+Overall, my aim was to reproduce the layout of the image, and also take inspiration from its colour palette to create a new  pop-art, geometric visual composition*/
+
 html{
-    background-color: rgb(244, 244, 244);
+    background-color: #000000;  /*This background colour is strong and energetic, however creates good contrast with the colour of the text, to ensure good legibility*/
+    border: solid 3px var(--col01); /*I chose to also create a black border around the whole body, to create a sort of frame around the page and delineate the borders. Without it, the purple background seemed to be a little disturbing. */ 
+    border-color: #ffffff;
+    
 }
+
+
+
+*{
+    box-sizing: border-box; /*I applied box-sizing rule and the border box property to all elements using * so that every element in the page doesn't get bigger when I add padding or borders. */
+    padding-left: 3px;
+}
+
+
+
+
+/* The root html parent element passses down certain properties or variables described below to child elements in the page, 
+in this case it's the colour variable (--col). any other child element that has, in this case, colour variable, 
+gets those values specified in the root property. 
+The colour palette below contains very bright and colourful hues, inspired by pop art, and was chosen on https://webaim.org/resources/contrastchecker/ to ensure all colours maintain a good level of contrast and make the webpage accessible*/
+:root{
+    --col01: #000000;
+    --col02: #10ff08;
+    --col03: #0044ff;
+    --col04: #dd0303;
+    --col05: #ff009d;
+    --col06: #ffffff; 
+    }
+    /*Colour palette contains bright colours, inspired by pop art (the colours I used most frequently in the page are listed above, however I made some smaller changes in some cases. 
+    I took inspiration from the colours used in the original layout, making some changes to adjuct leegibility and ensure there was enough contrast between the elememts. 
+    (for example, where the background image in the original layout was a light, pale blue, I chose a bright gradient blue instead to fill the box in my layout and make the element stand out.*/
+
+
+
 
 
 h1{
-    color: blue;
+    color: var(--col02); /*This particular hue of green ensures good contrast with the background, and makes the title easy to read. */
+    padding: 2%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* this font family is very linear and simple, so it doesn't distract the viewer from the important content of the webpage*/
+    }
+    
+  
+    
+
+.container {  
+    display: grid;
+    grid-template-columns: 3fr 10fr 10fr;
+    grid-template-rows: 2fr /* changes position on the horizontal line*/ 4fr /*DEFINES THE LENGTH OF THE PAGE*/ 0fr;
+    padding-top: 35%;
+    padding-left: 10%; 
+    /*Padding added to display the row of 3 boxes at the center of the page, partially overlaying the larger box-a*/
+  }
+
+
+
+/* This is the biggest image of the layout  "The Incal 3 - page 3" , also the first one we see on the page.*/
+#box-a{
+    display: grid;
+    position: absolute; 
+    z-index: 1;
+    margin-left: 12px;
+    width: 95%;
+    height: 650px;
+    background: radial-gradient(ellipse at top, #000ba0, transparent),        
+                linear-gradient(var(--col02) 20%, #ca6c00, #ca6c00, transparent);
+    /*gradients and colours for this work imitate the colour patterns and textures pf the priginal layout (eg: the 1st large box shows manu details and the main 4 colours are blue, green, brown and orange. Therefore I included these 4 colours in this box organised in a radial gradient)*/
+    box-shadow: 10px 10px 15px var(--col01); 
+    /*I'm adding some shadow to each box, except for the two ones in the background, to give a sense of space and 3 dimensions, to underline the fact that these boxes and overlaying each other. Each box has different shadow values, depending on their x-index and if they are in the background or foreground*/
+    /* I chose this border styling (colour, size, width) to reflect the styling of the box in the original layout. I chose this kind of approach for every other box, arrianging the style of the border and shadow taking inspiration from the original layout and whether the box plays important content for the page or is secondary. */
+    border-style: outset;
+    border-color: var(--col02, --col04, --col1);
+    border-width: 6px;
 }
+
+
+
+
+#box-b{
+    /* The reference image shows a very pale white rectangle in the background, I thought it might just be the paper page because it look svery pale and blurry. However, I decided o include this element in my layout as well, by creating a pale pink (almost white) big background rectangle, behind all other boxes)*/
+    display: grid;
+    position: absolute; 
+    z-index: auto;
+    margin-left: 12px;
+    width: 95%;
+    height: 1570px;
+    background-color: #ffe3f6;
+    opacity: 60%;
+    border-style: groove;
+    border-color: var(--col06);
+    border-width: 8px;
+}
+
+
+
+
+/* row of boxes, 3 boxes in a row, the second row we can see from the top*/
+.box-row{
+    display: grid;
+    z-index: 2;
+    padding: 5%;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
+    row-gap: 15px;
+
+}
+
+
+#box2{
+    position: relative; 
+    width: 350px;                                                                           
+    height: 350px;
+    z-index: 2;
+    background-image: radial-gradient(rgb(3, 3, 145) 20%, rgb(0, 172, 202) 80%); /*these colours remind me of  the background colour used in the reference layout*/
+    box-shadow: 7px 13px 10px var(--col01);
+    border-style: ridge;
+    border-color: black;
+    border-width: 7px; 
+}
+
+#box3{
+    position: relative; 
+    z-index: 3;
+    width: 200px;
+    height: 350px;
+    background-color: var(--col02);
+    box-shadow: 10px 15px 10px var(--col01);
+    border-style: dotted; /* I tried to experiment with the border styles for each box, to make creative results different from one another. In this case, as the dialogues in the reference image were intense, I wanted to give to this box some relevance and importance compared to the others. Therefore I opted for a creative and decorative dotted border.*/
+    border-width: 13px;
+}
+
+
+#box4{
+    position: relative; 
+    z-index: 2;
+    width: 400px;
+    height: 350px;
+    background-color: #aab600d7; /*slight variations in the colour palette, to adapt t to the box and contest. main reference colour from colour palette was #10ff08;*/
+    box-shadow: 8px 13px 15px var(--col01);
+    border-style: solid;
+    border-width: 8px;
+    border-color: var(--col01);
+}
+
+
+/*first row of boxes ends here*/
+
+
+
+/*box on the left, in the foreground*/
+#box6{
+    position: relative; 
+    z-index: 3;
+    width: 250px;
+    height: 550px;
+    background-image: linear-gradient( #dde74ed7, #ad5c00);
+    box-shadow: 10px 13px 10px var(--col01);
+    border-style: double;
+    border-color: #000000;
+    border-width: 13px;
+}
+
+/*box on the right, in the foreground*/
+#box7{
+    position: relative; 
+    z-index: 3;
+    top: 75%;
+    width: 200px;
+    height: 550px;
+    left: 200%;
+    top: 1%; 
+    background: linear-gradient(to bottom, #1200b6, #aab600d7, #1200b6, orange );
+    box-shadow: 13px 13px 10px var(--col01);
+    opacity: 100%;
+    border-style: dashed;
+    border-width: 5px;
+}
+
+
+
+
+
+
+/*small blue rectangle in the background*/
+#box5{
+    z-index: auto;
+    position: absolute; 
+    right: 20%;
+    margin-top: 27%;
+    width: 750px;
+    height: 280px;
+    background-color: var(--col03);
+    border-style: none;
+    box-shadow: 5px 5px 5px var(--col01); /*I added some shadow to these 2 boxes as well, because even though they are in the background, below the other rectangles, they are still in the foreground compared to the white page*/
+}
+
+/*second rectangle in the background*/
+#box5-a{
+    z-index: auto;
+    position: absolute; 
+    right: 20%;
+    margin-top: 49%;
+    width: 750px;
+    height: 410px;
+    background-image: linear-gradient(#1200b6 3%, #10ff08, #1200b6, #ad5c00);
+    box-shadow: 5px 5px 5px var(--col01);
+}
+
