@@ -248,4 +248,19 @@ font-size: 15px;
 
 
 
+.footer-line{
+  border-top: 3px double var(--col-04);
+  height: 10px;
+}
 
+
+
+
+
+
+
+.footer{
+  display: block;
+  position: absolute;
+  background-color: var(--col-02);
+}
