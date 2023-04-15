@@ -78,7 +78,10 @@ margin-bottom: 10%;
 }
 
 
-
+.FilterSection{
+  text-align: center;
+  padding-left: 27%;
+}
 
 
 .FilterBox{
@@ -124,7 +127,9 @@ margin-bottom: 10%;
   }
 
 
-
+.student{
+  padding-left: 43%;
+}
 
 
 /* Recipe styling */
@@ -137,8 +142,8 @@ margin-bottom: 10%;
 
 .stylecard{
   padding-top: 1%;
-  width: 80%;
-  height: 55%;
+  width: 82%;
+  height: fit-content;
   background-color: #fff7ec;
   border-style: solid;
   border-color: var(--col-04);
@@ -147,7 +152,7 @@ margin-bottom: 10%;
 
 .stylecard:hover{
   width: 80%;
-  height: 55%;
+  height: fit-content;
   border: var(--col-04) 7px;
   border-style: double;
   box-shadow: var(--col-04) 8px 8px 2px;
@@ -155,12 +160,12 @@ margin-bottom: 10%;
 
 
 .grid-recipe-cards{
-    z-index: auto;
     display: grid;
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1.5fr 0.1fr 1.4fr;
     grid-auto-columns: 1fr;
-    gap: 30px 30px;
+    gap:10px;
+    row-gap: 5px;
     grid-auto-flow: row;
     column-width: 400px;
   padding-left: 5%;
@@ -227,6 +232,7 @@ font-size: 15px;
 .info{
   font-family: 'Playfair Display', serif;
   margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 
