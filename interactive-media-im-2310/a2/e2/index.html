@@ -35,39 +35,47 @@
 
 
     <div class="FilterSection">     
-<!--ALL COMMENTS HERE: 
-- the customised filters I added to the page are: 
+<!--ALL INFORMATION DESIGN COMMENTS BELOW: 
+
+- The customised FILTERS I added to the page are: 
 1) Difficulty level (rated easy/beginner, medium/intermediate, complex/expert)
 2) Type of dish (entries, main dish, sides, dessert)
 3) Ingredients (fruit, vegetables, pasta, meat)
 4) Dietary (vegan, vegetarian, other)
-
+- After making research on similar recipe and cuisine webpages, I've noticed that the most common serch filters are: dietary, preparation time and ingredients. This information is what users look after and expect to find when navigating a recipe page or blog. I've tried to adjust and customise these filters to the overall information design and content of my page. 
+- These filters (in addition to the overall design and layout of the page) is a visual system that organises and filters the information provided into a more accessible, useful and efficient digital product. 
+- Filters can be used either individually as well as in combination with other menu filters. Either way, they provide good usability and make the filtering process easy and efficient. This allows the content and information design of the page to be more accessible and useful. When using filters, users can customise and adapt the content of the page to their needs/goals. 
+- I chose Simply Recipes https://www.simplyrecipes.com/meal-plans-5090752 as a main source of inspiration, in terms of UI Design and layout, because I believe that it's a good example of how to display a large amount of information into simple and effective information design.  
 
 - USABILITY GOALS of this page : 
 1) effective (Does it allow susers to find what they want? My aim is to make the webpage as effective as possible, by reducing the amoutn of information displayed (leaving only the information important to the let the viewers understand the recipes. I also added more filters and categories to allow users to find what they're looking for in an easy way.)
 2) efficient (How quickly do users find what they need? The filters, headers, quick info and recipe cards allow users to navigate the pages easily and quickly, by filtering information and find what they need.)
-3) safe (is there an undo button, can yiu fix errors, eg: filters in the recipe website, don't allow users to go back and clear filters. Buttons are not clear, icons are small and hard to decipher and understand where they link to)
-4) utility (relative to effectiveness, see canvas pdf)
-5) learnable (provide contextual information that can provide learnign information, you need o provide people wih tools to learn and achieve their goals with your product. that's what people want, get to the thing, eg most often not interested in the whole website, they just want ot find what they need. Good design though might interest people in navigating a bit more). 
+3) safe: Buttons in the original page provided, were not clear and the icons were too many, too small and hard to decipher. tried to group the filter buttons into a single section (dropdown menu) and include buttons that link to the recipe websites and external sources (RecipeLinkButton). I also decided not to include all those icons, as it wasn't clear what pages exactly they were linking to, (and this would be neither effective nor udeful for the user). I only included a clock icon to introduce the preparation time for each recipe. 
+4) utility: the information provided (recipes, links, images, text) is useful to the user to navigate the page, filter information and achieve their goals on the page. 
+5) learnable (I wanted the page to become easily familiar to the user, so that thy can navigate it however they prefer and get the information they are after. I am providing a series of tools so that users can learn and achieve their goals on the page. Tools include: buttons, links, onhover and on click information to give visual feedback, colours, images, animations, a dropdown menu and search filters). 
 5) memoraibility (are funcitons easy to remember? provide users with memories about functionalities of your product, so that when they go back to use, they know what to do and where to find things)
 
 
 - With regards to the style and design of the page, I am taking inspiration from the design, colour palette, UI/UX of the recipe website https://www.simplyrecipes.com/recipes/feta_brined_roast_chicken/ 
-- Colour palette chosen on: https://paletton.com/#uid=10L0u0kwi++bu++hX++++rd++kX   ;  https://imagecolorpicker.com/color-code/ffa800 and https://coolors.co/palette/001219-005f73-0a9396-94d2bd-e9d8a6-ee9b00-ca6702-bb3e03-ae2012-9b2226
-- In order to filter the information provided and redesign the information architecture of the page, I decided to remove the Flickr links  (of the images) to make the webpage and recipes more realistic, as if it was a recipe written and published by a real author and displayed on a  website. 
-- The preparation time for every recipe was written like this 00:10 - preparation time 00:30 . I decided to rewrite the time in minutes (or hours, depending on te recipe) to make it more clear,  readable and understandable. 
+- Colour palette inspired by: https://paletton.com/#uid=10L0u0kwi++bu++hX++++rd++kX   ;  https://imagecolorpicker.com/color-code/ffa800 and https://coolors.co/palette/001219-005f73-0a9396-94d2bd-e9d8a6-ee9b00-ca6702-bb3e03-ae2012-9b2226
+- Colour palette consists of 4 colours + 2 hues in of the greyscale. The 4 main colours are a tetrdic combination of blue, violet, orange and yellow (Colour wheel)
+- I wanted the UI of the page to look classy and colourful to capture the users' attention and making them interested into navigating a bit more. At the same time however, I wanted the page to be as effective and accessible as possible. Therefore, I tried to get rid of the information I thought were not necessary, and organised the rest of the content into chunks, pieces of information related to each other and providing simlar content, to make the layout clear and simple to read (usable, learnable, easy to memorise)
+- I also decided to include the filter section at the very top of the page (easy to find and go back at any time; safe, effective, useful). This makes the filter section a sort of dropdown menu from which users can easily navigate the page (efficient, and easy to remember). 
+- In order to filter the information provided and redesign the information architecture of the page, I decided to remove the Flickr links  (of the images) to make the webpage more realistic, as if each recipe was written and published by a real author and displayed on the website (however, I added a button to link each recipe card to the website that displays the full recipe). I believe this is a good way to filter information (users can click on the buttton and view the full recipe only if they are interested). At the same time, I believe it's also a good way to reference the original sources that published the recipes, without making the page appear too crowded and messy. 
+- "Full Recipe" buttons are styled in css to match the aesthetics of the webpage. 
+- The preparation time for every recipe was written like this 00:10 - preparation time 00:30 . I decided to rewrite the time in minutes (or hours, depending on the recipe) to make it more clear, readable and understandable. Preparation time is written in either mins or hours (if it requires a long preparation time). This makes the information appear clear, quickly and easily understandable (effective and efficient). 
 - I decided to remove the recipe-image-box div as the information it contained was either removed or relocated into other elements
-- After making research on similar recipe and cuisine webpages, I've noticed that the most common serch filters (which is what users are after and expect to fin when navigating a website) are: dietary, preparation time and ingredients. I've tried to adjust and customise the filters for this page according to these results.
-- I reorganised the information provided for each recipe into chunks of information: Headings, image, Info/description of the recipe. (layout ad grid are similar to simplyrecipes.com/recipes/ricotta_stuffed_chicken/ which I am using as a main source of inspiration for this page. I really appreciate how clear, clean and well organised the page is, even though it contains a massive amount of recipes and visual content)
-- I decided to remove the recipe-image-box div as the information. This is because I either removed the info it contained or moved it into other elements to make the layout appear more clear and readable. 
-- I removed also the Flickr links and other attribution to make the webpage and recipe more realistic, as if it was a recipe written and published by a real author and displayed on the website. 
+- I also organised the information provided for each recipe into chunks of information: Headings, image, Info/description of the recipe. (layout ad grid are similar to simplyrecipes.com/recipes/ricotta_stuffed_chicken/ which I am using as a main source of inspiration for this page. I really appreciate how clear, clean and well organised the page is, even though it contains a massive amount of recipes and visual content)
+- I removed the recipe-image-box div as well. This is because I either removed the information it contained or moved it into other elements to make the layout appear more clean and readable (effective, usable, leanrable) 
+- I also removed the Flickr links and other attribution to make the webpage and recipe more realistic, as if it was a recipe written and published by a real author and displayed on the website. 
 - I decided to include a clock icon to draw attention on the time needed to prepare each recipe. After making some research on similar cooking webpages, I noticed that this is a common feature, as users want to know in advance how much time is required to complete a recipe, even before starting to read the rest of the content (ingredients, servings, etc)
 - For each recipe, I grouped together skill levels, difficulty, type of cuisine, type of dish and other information into a single, short paragraph below the image <div class="info">. This is additional information that users can read if they are interested in cooking the dish, however it's not pivotal content. That's why it's written under the image, at the end of the recipe card, and in a smaller size. The main attention is drawn on the headings (which already give an idea of the type of recipe and dish) and of course the image as well.
- - with regards to the Ui design and other aesthetic choices, I wanted the page to look classy and colourful while being at the same time as effective and accessible as possible. Therefore, I tried to get rid of the information I thought were not necessary, and organising the rest of the content into chunks and groups to make it clear and simple to read. 
- - in the original layout, all recipe boxes were stacked upon one another with no negative space left in between. This made it very hard to understand where one recipe started and where the previous one ended. So I decided to define each card with a background colour, border, box shadow, column and row gaps. I believe this makes it easier for the user to read and understand (effective, efficient, learnable and easy to memorise information)
- - Buttons, cards and filters all have on hover and on click effects (either colour change, or box shadow, or different border style) to give visual feedback to the user. This helps the user to understand that what elements are hovered on or clicked, helps to filter information and makes the navigation of the webpage easier. 
- - I wanted the filter section to be at the very top of the page, as if it was a dropdown menu from which users can easily navigate the page.  
- - 
+- In the original layout provided, all recipe boxes were stacked upon one another with no negative space left in between. This made it very hard to figure out where one recipe starts and where the previous one ends. So I decided to group each recipe into a card, which is defined by a background colour, border, box shadow, column and row gaps. I believe this makes it easier for the user to read the information provided, navigate the page easily and more efficiently, while also being aesthetically organised and pleasing (effectiveness, efficiency, usability, learnability and memorability)
+- Buttons, cards and, menu and filters have on hover and on click effects (either change of colour, or box shadow, or different border style) to give visual feedback to the user. This helps them to better understand their actions and interactions with the digital product, by visualising which elements are hovered on, clicked, or in default state. It also helps to filter information and makes the navigation of the webpage easier. 
+- In order to provide better visual feedback and make the user-experience more accessible, interactive and pleasing, I also added some interactions (on hover and on click effects). I believe this is an engaging and effective way to communicate to the user the result of their actions with the page. 
+- Murray, J. states that "information is data that has been organized, contextualized, and interpreted." Therefore my aim was to create an organizational structure to store and present useful information and meet the usability goals explained above. 
+- I decided to include as many visuals as possible and write less text, to allow accessibility to a broader range of users and keep content short, clear and simple. Content and information design is suitable for all users, whther they are beginner, intermediate or expert digital users. 
+- To make the navigation easy and accessible, I tried to organise information following a visual eye pattern. Therefore, all filters are organised in a section (a row of main categories and then a dropdown menu showing all possible filtersnand subcategories). Recipes are organised in two columns, so eye patterns starts following from the recipe and the left, following to the right and then back to left of the following row. 
 -->
 
 
@@ -171,7 +179,7 @@
       <b>Servings:</b> 4 - 6</p1> <br>
   
     
-    <a class="RecipeLink" href="https://www.abc.net.au/everyday/baked-puttanesca-risotto-with-tomato-olives-lemon-parsley-recipe/11270338">Full Recipe</a>
+    <a href="https://www.abc.net.au/everyday/baked-puttanesca-risotto-with-tomato-olives-lemon-parsley-recipe/11270338" class="RecipeLinkButton" role="button">Full Recipe</a>
     </div>
 </div>
 
@@ -202,7 +210,7 @@
             <p1 class="description"><b>Info:</b>Italian Vegeterian Salad
             <br><b>Servings:</b> N/A</p1> <br>
             
-            <a class="RecipeLink" href="https://www.abc.net.au/everyday/baked-puttanesca-risotto-with-tomato-olives-lemon-parsley-recipe/11270338">Full Recipe</a>
+            <a href="https://www.abc.net.au/everyday/baked-puttanesca-risotto-with-tomato-olives-lemon-parsley-recipe/11270338" class="RecipeLinkButton" role="button">Full Recipe</a>
             </div>
 </div>
 
@@ -233,7 +241,7 @@
             <p1 class="description"><b>Info:</b> Fusion Vegeterian Savoury Snack.
               <br><b>Servings:</b> 4-6</p1> <br>
             
-            <a class="RecipeLink" href="https://www.seriouseats.com/crispy-enoki-and-onion-fritter-with-thai-curry-mayo-recipe">Full Recipe</a>
+            <a href="https://www.seriouseats.com/crispy-enoki-and-onion-fritter-with-thai-curry-mayo-recipe" class="RecipeLinkButton" role="button">Full Recipe</a>
             </div>
 </div>
 
@@ -264,7 +272,7 @@
         <p1 class="description"><b>Info:</b>Korean Vegetarian Sweet Snack
         <br><b>Servings:</b>10 pieces</p1> <br>
                                               
-        <a class="RecipeLink" href="https://www.maangchi.com/recipe/jjinppang">Full Recipe</a>
+        <a href="https://www.maangchi.com/recipe/jjinppang" class="RecipeLinkButton" role="button">Full Recipe</a>
     </div>
 </div>
                                   
@@ -294,7 +302,8 @@
     <p1 class="description"><b>Info:</b>West Vegeterian Sweet Snack
     <br><b>Servings:</b>28 cookies</p1> <br>
                                                                               
-    <a class="RecipeLink" href="https://www.seriouseats.com/the-food-lab-best-chocolate-chip-cookie-recipe">Full Recipe</a>
+
+    <a href="https://www.seriouseats.com/the-food-lab-best-chocolate-chip-cookie-recipe" class="RecipeLinkButton" role="but">Full Recipe</a>
     </div>
 </div>
 
@@ -323,7 +332,7 @@
     <p1 class="description"><b>Info:</b> Fusion Vegetarian Savoury Snack
     <br><b>Servings:</b> 1 Sandwich</p1> <br>
                                               
-    <a class="RecipeLink" href="https://www.seriouseats.com/grilled-cheese-with-kimchi-recipe">Full Recipe</a>
+    <a href="https://www.seriouseats.com/grilled-cheese-with-kimchi-recipe" class="RecipeLinkButton" role="button">Full Recipe</a>
   </div>
 </div>
                                   
@@ -346,7 +355,7 @@
                                     
   <div style="margin-bottom: 1%;">
     <img class="clock-icon" alt="clock icon" src="images/clock.png" width="25" height="25">
-    <h2 class="TimeToCook">(Overnight Preperation) + 4h</h2>
+    <h2 class="TimeToCook">(Overnight Preperation) + 4hrs </h2>
   </div>
                                           
                                           
@@ -356,7 +365,7 @@
     <p1 class="description"><b>Info:</b> American Meat-based Main Course
     <br><b>Servings:</b> 6 (generous) </p1> <br>
                                               
-    <a class="RecipeLink" href="https://www.maangchi.com/recipe/kimchijeon">Full Recipe</a>
+    <a href="https://www.maangchi.com/recipe/kimchijeon" class="RecipeLinkButton" role="button">Full Recipe</a>
   </div>
 </div>
                                   
@@ -387,7 +396,7 @@
     <p1 class="description"><b>Info:</b> Korean Vegeterian Savoury Snack
     <br><b>Servings:</b> 8 Slices</p1> <br>
                                                                                     
-    <a class="RecipeLink" href="https://www.maangchi.com/recipe/kimchijeon">Full Recipe</a>
+    <a href="https://www.maangchi.com/recipe/kimchijeon" class="RecipeLinkButton" role="button">Full Recipe</a>
   </div>
 </div>
                                                                         
@@ -418,7 +427,7 @@
     <p1 class="description"><b>Info:</b> North African Vegetarian Main Course
     <br><b>Servings:</b> 4 - 6 </p1> <br>
                                                                                                                           
-    <a class="RecipeLink" href="https://www.seriouseats.com/shakshuka-north-african-shirred-eggs-tomato-pepper-recipe">Full Recipe</a>
+    <a href="https://www.seriouseats.com/shakshuka-north-african-shirred-eggs-tomato-pepper-recipe" class="RecipeLinkButton" role="button">Full Recipe</a>
   </div>
 </div>
                                        
@@ -447,22 +456,139 @@
                                                                                                                                                             
     <p1 class="description"><b>Info:</b> Italian Pescatarian Main Course
     <br><b>Servings:</b> 4 </p1> <br>
-                                                                                                                                                                
-    <a class="RecipeLink" href="https://www.patreon.com/posts/pasta-with-sauce-45042575">Full Recipe</a>
+                                                                                                           
+
+    <a href="https://www.patreon.com/posts/pasta-with-sauce-45042575" class="RecipeLinkButton" role="button">Full Recipe</a>
   </div>
 </div>
 
 
 
 
+                                         <!-- Recipe 11 -->
+
+<div class="stylecard padding-content ">
+
+    <h2 class="RecipeName">Sweet, Sour, & Spicy Korean Fried Chicken</h2>
+    <p class="Author">Maangchi</p>
+                                                                                                                                                    
+                                                                                                                                                    
+                                                                                                                                                      
+    <img class="RecipeImg" src="./images/Korean_Fried_Chicken.jpg" alt="Korean Fried Chicken" width="420" height="340">
+                                                                                                                                                    
+                                                                                                                                                          
+                                                                                                                                                      
+  <div style="margin-bottom: 1%;">
+    <img class="clock-icon" alt="clock icon" src="images/clock.png" width="25" height="25">
+    <h2 class="TimeToCook"> 45 - 50 mins</h2>
+  </div>
+                                                                                                                                                            
+                                                                                                                                                            
+  <div class="info">
+    <p1 class="SkillLevel"><b>Difficulty:</b> Intermediate</p1><br>
+                                                                                                                                                            
+    <p1 class="description"><b>Info:</b> Korean Meat-based Main Course
+    <br><b>Servings:</b> 3 - 4 </p1> <br>
+                                                                                                                                                                
+    <a href="https://www.maangchi.com/recipe/yangnyeom-tongdak" class="RecipeLinkButton" role="button">Full Recipe</a>
+  </div>
+</div>
 
 
 
 
+                                        <!-- Recipe 12 -->
+<div class="stylecard padding-content ">
+
+    <h2 class="RecipeName">The Ultimate Beef Stroganoff Recipe</h2>
+    <p class="Author">J. Kenji López-Alt <br> Serious Eats</p>
+                                                                                                                                                                                          
+                                                                                                                                                                                          
+                                                                                                                                                                                            
+    <img class="RecipeImg" src="./images/Stroganoff.jpg" alt="Beef Stroganoff" width="420" height="300">
+                                                                                                                                                                                          
+                                                                                                                                                                                                
+                                                                                                                                                                                            
+  <div style="margin-bottom: 1%;">
+    <img class="clock-icon" alt="clock icon" src="images/clock.png" width="25" height="25">
+    <h2 class="TimeToCook"> 55 mins</h2>
+  </div>
+                                                                                                                                                                                                  
+                                                                                                                                                                                                  
+  <div class="info">
+    <p1 class="SkillLevel"><b>Difficulty:</b> Intermediate</p1><br>
+                                                                                                                                                                                                  
+    <p1 class="description"><b>Info:</b> Russian Meat-based Main Course
+    <br><b>Servings:</b> 4 </p1> <br>
+                                                                                                                                                                                                      
+    <a href="https://www.seriouseats.com/ultimate-beef-stroganof-recipe" class="RecipeLinkButton" role="button">Full Recipe</a>
+  </div>
+</div>
 
 
 
+                                      <!-- Recipe 13 -->
 
+<div class="stylecard padding-content ">
+
+    <h2 class="RecipeName">Vanilla-Brown Butter Pear Tart</h2>
+    <p class="Author">Carla Lalli Music</p>
+                                                                                                                                                                                        
+                                                                                                                                                                                        
+                                                                                                                                                                                          
+    <img class="RecipeImg" src="./images/Pear_Tart.jpg" alt="French vanilla and pear tart" width="420" height="330">
+                                                                                                                                                                                        
+                                                                                                                                                                                              
+                                                                                                                                                                                          
+  <div style="margin-bottom: 1%;">
+    <img class="clock-icon" alt="clock icon" src="images/clock.png" width="25" height="25">
+    <h2 class="TimeToCook"> 3 hrs</h2>
+  </div>
+                                                                                                                                                                                                
+                                                                                                                                                                                                
+  <div class="info">
+    <p1 class="SkillLevel"><b>Difficulty:</b> Intermediate</p1><br>
+                                                                                                                                                                                                
+    <p1 class="description"><b>Info:</b> French Vegeterain Dessert
+    <br><b>Servings:</b> 4 </p1> <br>
+                                                                                                                                                                                                    
+    <a href="https://www.patreon.com/posts/recipe-vanilla-60100711" class="RecipeLinkButton" role="button">Full Recipe</a>
+  </div>
+</div>
+                                    
+
+
+
+                                         <!-- Recipe 14 -->
+
+<div class="stylecard padding-content ">
+
+    <h2 class="RecipeName">Vegetarian Carbonara with Mushrooms, Miso and Parmesan</h2>
+    <p class="Author">Hetty Mckinnon</p>
+                                                                                                                                                                                          
+                                                                                                                                                                                          
+                                                                                                                                                                                            
+    <img class="RecipeImg" src="./images/Mushroom_Carbonara.jpg" alt="vegetarian Mushroom Carbonara" width="420" height="300">
+                                                                                                                                                                                          
+                                                                                                                                                                                                
+                                                                                                                                                                                            
+  <div style="margin-bottom: 1%;">
+    <img class="clock-icon" alt="clock icon" src="images/clock.png" width="25" height="25">
+    <h2 class="TimeToCook"> 30 mins</h2>
+  </div>
+                                                                                                                                                                                                  
+                                                                                                                                                                                                  
+  <div class="info">
+    <p1 class="SkillLevel"><b>Difficulty:</b> Beginner</p1><br>
+                                                                                                                                                                                                  
+    <p1 class="description"><b>Info:</b> Fusion Vegetarian Main Course 
+    <br><b>Servings:</b> 4 </p1> <br>
+                                                                                                                                                                                                      
+  </div>
+  <a href="https://www.abc.net.au/everyday/vegetarian-carbonara-with-mushrooms-and-miso/12426392" class="RecipeLinkButton" role="button">Full Recipe</a>
+
+</div>
+ 
 
 
 

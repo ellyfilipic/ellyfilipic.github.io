@@ -9,24 +9,14 @@
 
 
 
-
-.box-orange{
-  color: var(--col-04);
-  z-index: 2;
-}
-
-
-/* Colour palettes inspired by  */
+/* Colour palette */
 :root{
   --col-01:#222323;
-  --col-03:#0057ff; 
-  --col-05:#a800ff; 
-  --col-04:#ff9700; 
-  --col-07:#9b2226; 
-  --col-06:#00ffa8; 
   --col-02:#f0f6f0;
-
-  --border: 1px solid var(--col-02);
+  --col-03:#0057ff;
+  --col-04:#ff9700; 
+  --col-05:#a800ff; 
+  --col-06:#00ffa8; 
 }
 
 
@@ -35,12 +25,17 @@ body{
   display: flex;
   flex-direction: column;
   background-color: #ffe5bd;
-  color: var(--col-02);
   padding: 2vw;
   font-family: 'Playfair Display', serif;
   font-size: 15px;
 }
 
+
+
+.student{
+  padding-left: 43%;
+  cursor: default;
+}
 
 .profilepic{
   display: flex;
@@ -51,16 +46,6 @@ body{
 }
 
 
-h1{
-  font-family: 'Dancing Script', cursive;
-  font-size: 50px;
-  font-weight: bold;
-  text-align: center;
-  color: var(--col-01);
-  margin-bottom: 3%;
-}
-
-
 h5{
   padding-left: 2%;
   margin-top: 2%;
@@ -68,20 +53,35 @@ h5{
 }
 
 
-/*
-  i've set up a basic flexbox for each recipe container - you might want to change some of the 
-  flex properties here on the container or on the individual flex items depending on how you want to style them
-*/
+
+h1{
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--col-01);
+  margin-bottom: 5%;
+  cursor: default;
+}
+
+
+
+/* Filters section */
 
 summary{
 margin-bottom: 10%;
+cursor: pointer;
 }
 
+summary:hover{
+  text-decoration-line: underline overline;
+}
 
 .FilterSection{
   text-align: center;
   padding-left: 27%;
 }
+
 
 
 .FilterBox{
@@ -94,10 +94,8 @@ margin-bottom: 10%;
 }
 
 .FilterBox:hover{
-  font-family: 'Dancing Script', cursive;
-  font-size: 23px;
   color: var(--col-04); 
-}
+ }
 
 
 
@@ -117,7 +115,15 @@ margin-bottom: 10%;
   border: none;
   color: #fff5e6;
   font-size: 16px;
+  cursor: pointer;
+
+    /* Animation code found on https://animista.net/ . 
+    However I tried to personalise and edit the code as much as I could. */
+  -webkit-animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both;animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both
 }
+@-webkit-keyframes FilterButton{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+
+
 
 
 .SelectedFilter{
@@ -125,11 +131,6 @@ margin-bottom: 10%;
   color: var(--col-05); 
   font-size: 20px;
   }
-
-
-.student{
-  padding-left: 43%;
-}
 
 
 /* Recipe styling */
@@ -147,6 +148,7 @@ margin-bottom: 10%;
   background-color: #fff7ec;
   border-style: solid;
   border-color: var(--col-04);
+  cursor: pointer;
 }
 
 
@@ -155,8 +157,11 @@ margin-bottom: 10%;
   height: fit-content;
   border: var(--col-04) 7px;
   border-style: double;
-  box-shadow: var(--col-04) 8px 8px 2px;
-}
+  box-shadow: var(--col-04) 10px 10px 2px;
+  -webkit-animation:jello-diagonal-2 .3s both;animation:jello-diagonal-2 .3s both
+ }
+ @-webkit-keyframes stylecard{0%{-webkit-transform:skew(0deg 0deg);transform:skew(0deg 0deg)}30%{-webkit-transform:skew(-25deg -25deg);transform:skew(-25deg -25deg)}40%{-webkit-transform:skew(15deg,15deg);transform:skew(15deg,15deg)}50%{-webkit-transform:skew(-15deg,-15deg);transform:skew(-15deg,-15deg)}65%{-webkit-transform:skew(5deg,5deg);transform:skew(5deg,5deg)}75%{-webkit-transform:skew(-5deg,-5deg);transform:skew(-5deg,-5deg)}100%{-webkit-transform:skew(0deg 0deg);transform:skew(0deg 0deg)}}@keyframes jello-diagonal-2{0%{-webkit-transform:skew(0deg 0deg);transform:skew(0deg 0deg)}30%{-webkit-transform:skew(-25deg -25deg);transform:skew(-25deg -25deg)}40%{-webkit-transform:skew(15deg,15deg);transform:skew(15deg,15deg)}50%{-webkit-transform:skew(-15deg,-15deg);transform:skew(-15deg,-15deg)}65%{-webkit-transform:skew(5deg,5deg);transform:skew(5deg,5deg)}75%{-webkit-transform:skew(-5deg,-5deg);transform:skew(-5deg,-5deg)}100%{-webkit-transform:skew(0deg 0deg);transform:skew(0deg 0deg)}}
+
 
 
 .grid-recipe-cards{
@@ -201,10 +206,18 @@ margin-top: 5%;
 
 
 
+
 .Author{
 color: var(--col-01);
 font-size: 15px;
 }
+
+
+
+.RecipeImg:hover{
+  filter: grayscale(100%);
+}
+
 
 
 .clock-icon{
@@ -215,12 +228,37 @@ font-size: 15px;
 }
 
 
-.RecipeLink{
-  color: var(--col-03);
+.RecipeLinkButton{
+  z-index: 1;
+  display: flex;
+  width: 120px;
+  height: 30px;
+  background: transparent;
+  display: inline-block;
+  border: var(--col-04) solid 2px;
+  border-radius: 15px;
+  background-color: var(--col-04);
   font-size: 16px;
   font-family: 'Dancing Script', cursive;
+  text-align: center;
+  text-decoration: none;
+  color: var(--col-02);
+  box-shadow: 3px 3px 3px var(--col-01);
+  cursor: pointer;
+  margin-left: 32%;
+  margin-bottom: 5%;
   }
-  
+ 
+
+
+  .RecipeLinkButton:hover{
+    font-family: 'Dancing Script', cursive;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--col-02);
+    color: var(--col-04);
+  }
+
 
 
 .TimeToCook{
@@ -247,20 +285,3 @@ font-size: 15px;
 }
 
 
-
-.footer-line{
-  border-top: 3px double var(--col-04);
-  height: 10px;
-}
-
-
-
-
-
-
-
-.footer{
-  display: block;
-  position: absolute;
-  background-color: var(--col-02);
-}
