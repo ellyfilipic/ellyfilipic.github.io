@@ -178,7 +178,6 @@ summary:hover{
   
 
 .RecipeBox{
-  border: var(--border);
   column-width: 500px;
 } 
 
