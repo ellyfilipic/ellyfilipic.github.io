@@ -1,46 +1,61 @@
 <!DOCTYPE html>
-    <!--when browser reads this page, this tag tells the browser that is a html document and has to be rendered as an html structure. it won't appear to users-->
 
-    <!-- HTML tag is a container. html is about container (html ,head, body) and lang defines the language you are writing in, which is useful for audible version
-    of the website for deaf-->
+<!-- DUE IN 2 WEEKS, NEXT TUESDAY IS PUBLIC HOLIDAY -->
+<!-- 
+
+  PROVIDE MEANINGFUL FEEDBACK TO THE FOLLOWING ELEMENTS:
+  1) DONE <button> with the id of load-link on the loading page (index.html) 
+  2) DONE <div> with the id of load-throbber on the loading page (index.html)
+  3) DONE <li> inside of the <ol> inside of the <nav> on the information page (hosono.html)
+  4) <button> with the id of mode-button on the information page (hosono.html)
+  5) switchModes() function - hint you can add a transition CSS property to the <body> and it will be inherited 
+     by all the elements inside, so when custom CSS variables are changed it will apply transition
+
+-->
+
 <html lang="en">
 
+  <head>
+
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
 
 
-       <head> 
-            <!-- the head tag refers to all medadata of the page. wont be shown on the window or website, but gives instructions to the browser about metadata
-        referred to the website (such as links, css docs, javascript docs, google fonts links....). space margin on the left helps remember that head is in container htmml-->
+    <title>Loading Page</title>
+
+    <script src="./fakeLoad.js" defer></script>
+
+  </head>
+
+  <body id="load-body">
+
+      <h1>Haruomi Hosono</h1>
+      <!--
+        Typically I'd use an <a> here but as we're faking a load time I'm using a <button> instead.  If it was an 
+        <a> I would leave off the target attribute so that it would redirect the current tab.
+      -->
+      <!--
+        The function loadPageAfterDelay() is declared in the file fakeLoad.js - it takes a number value that sets the 
+        amount of time it takes in ms and a url to redirect to.
+      -->
+      <!-- REMEMBER: to add css feedback to the load page button -->
+      <button id="load-link" onclick="loadPageAfterDelay(100, './hosono.html')">Click to Load Page</button>
+      <!--
+        This is a div we're using for the throbber - if we wanted to do a % based loading bar there is an element 
+        called <progress> but as this one is just indicating a wait rather than providing direct feedback on progress I've 
+        opted for using a <div>.
+      -->
+
+      <!-- this is the blue loading time bar. APPLY FEEDBACK (maybe animation or something) to indicate that theres some feedback-->
     
-
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-                <!--character set explains what sort of letter, numbers, symbols you will include in the website and utf 8 encodes most of them
-        name="viewport" content="width=device-width, initial-scale=1.0 all refer to width of the webpage when it loads on different devices. Enforces
-        correct scaling (either up or down) to make the page responsive.-->
-
-       
-        <link rel="stylesheet" href="style.css">
-
-
-          <script src="script.js"></script>
-                    <!--to link js docs, use script tag instead of link tag. used specifically for js, thats why we dont have to specify its a javascript, browser recognises what it is by using script tag-->
-       
-
-    </head>
+        <div id="load-throbber"></div>
+   
 
 
 
 
-
-
-    <body>
-
-        <h1>This is the first heading</h1>
-
-
-
-
-
-
-</body>
+  </body>
 
 </html>
