@@ -36,13 +36,23 @@ function switchModes(){
     document.documentElement.style.setProperty("--col-01", darkCol);
     document.documentElement.style.setProperty("--col-02", lightCol);
     // finally we want to update the text in the button
-    document.getElementById("mode-button").innerHTML = "Dark Mode";
+    var img = document.createElement("img");
+    img.src = "dark-mode.png";
+    var block = document.getElementById("mode-button");
+    block.appendChild(img);
   } else {
     /* change to dark mode - same statements as above but in reverse */
     isDark = true;
     document.documentElement.style.setProperty("--col-01", lightCol);
     document.documentElement.style.setProperty("--col-02", darkCol);
-    document.getElementById("mode-button").innerHTML = "Light Mode";
-
+    var img = document.createElement("img");
+    img.src = "dark-mode.png";
+    var block = document.getElementById("mode-button");
+    block.appendChild(img);
   }
 }
+
+
+
+//write this instead    document.getElementById("mode-button").innerHTML = "Image here";
+
