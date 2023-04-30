@@ -11,14 +11,14 @@
 }
 
 :root{
-  /* I decided to create a minimal and monochromatic colour palette, using only black and white for the whole website */
-  /* first two colours come from Kuroi's Manga Pallete Palette */
+  /* I decided to create a minimal and monochromatic colour palette, using only hues from the grayscale for the whole website */
+  /* first two colours come from Kuroi's Manga Pallete Palette, the others are hues of greyscale */
   /* https://lospec.com/palette-list/manga-pallete */
   --col-01:#171219;
   --col-02:#f2fbeb;
     font-size: 16px;
   /* scroll behaviour makes the <a> links to ids scroll to position over time rather than immediately */
-  scroll-behavior: smooth;
+  scroll-behavior: smooth 5s;
 }
 
 body{
@@ -96,7 +96,6 @@ li ul{
 
 #mode-button{
   float: right;
-  /* note the use of position: sticky to keep the button on the page even with scrolling */
   position: sticky;
   top: 1rem;
 }
@@ -119,14 +118,16 @@ li ul{
   font-size: 20px;
   line-height: 2rem;
   background-color: transparent;
+  color: var(--col-01);
   border: none;
- 
+  text-decoration: overline;
 }
 
 #load-link:hover{
   text-decoration-line: underline overline;
   font-weight: bold;
   font-size: 14px;
+  color: var(--col-01);
 }
 
 

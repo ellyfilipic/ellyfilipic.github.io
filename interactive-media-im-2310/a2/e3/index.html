@@ -7,8 +7,8 @@
   1) DONE <button> with the id of load-link on the loading page (index.html) 
   2) DONE <div> with the id of load-throbber on the loading page (index.html)
   3) DONE <li> inside of the <ol> inside of the <nav> on the information page (hosono.html)
-  4) <button> with the id of mode-button on the information page (hosono.html)
-  5) switchModes() function - hint you can add a transition CSS property to the <body> and it will be inherited 
+  4) DONE <button> with the id of mode-button on the information page (hosono.html)
+  5) DONE switchModes() function - hint you can add a transition CSS property to the <body> and it will be inherited 
      by all the elements inside, so when custom CSS variables are changed it will apply transition
 
 -->
@@ -32,29 +32,22 @@
   <body id="load-body">
 
       <h1>Haruomi Hosono</h1>
-      <!--
-        Typically I'd use an <a> here but as we're faking a load time I'm using a <button> instead.  If it was an 
-        <a> I would leave off the target attribute so that it would redirect the current tab.
+
+      <!-- I decided to customise this button to make it look very minimal, clean and simple. The "load page" basically consists only of some 
+        text and an overline; it has the same background colour as the page background and has no border or radius (to keep it very basic and 
+        essential). I also added some css code to style the on hover effect: on hover, the button scales down in size and the text becomes bolder, 
+        adding an underline as well as an overline. I believe this gives good visual feedback to the user (who can clearly understand when the 
+        button is triggered, on hover, clicked, or in default mode) as well as meeting the minimal aesthetics of the webpage.  
       -->
-      <!--
-        The function loadPageAfterDelay() is declared in the file fakeLoad.js - it takes a number value that sets the 
-        amount of time it takes in ms and a url to redirect to.
-      -->
-      <!-- REMEMBER: to add css feedback to the load page button -->
-      <button id="load-link" onclick="loadPageAfterDelay(10000, './hosono.html')">Click to Load Page</button>
-      <!--
-        This is a div we're using for the throbber - if we wanted to do a % based loading bar there is an element 
-        called <progress> but as this one is just indicating a wait rather than providing direct feedback on progress I've 
-        opted for using a <div>.
+      <button id="load-link" onclick="loadPageAfterDelay(10000, './hosono.html')">Click Here to Load</button>
+
+      <!-- The button becomes a load-throbber when it is clicked on. In order to redesign the bar, simulate a real loading bar and give feedback to 
+        the user to ask them to wait for the page to load, I created a thin, basic loading throbber, with a black outline and a light grey background (same colour as the background page). I also applied some animation, to simulate the bar progressing as the page continues to load. The animation allows the bar to get progressively longer as the page loads. 
+        I believe this is a quick and effective way to communicate feedback to the user. 
+        Usually, progress bars move from left to right, progressively and as the page loads; however, as the throbber is only simulating the loading progress, I decided to animate the bar so it can grow in length from the middle of the bar towards both directions (left and right).
       -->
 
-      <!-- this is the blue loading time bar. APPLY FEEDBACK (maybe animation or something) to indicate that theres some feedback-->
-    
         <div id="load-throbber"></div>
-   
-
-
-
 
   </body>
 
