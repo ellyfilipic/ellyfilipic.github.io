@@ -2,9 +2,12 @@
 /* ALL COMMENTS FOR THIS CSS DOCUMENTS ARE HERE: 
 - I decided to create a minimal and monochromatic colour palette, using only hues from the grayscale for the whole website
 - first two colours come from Kuroi's Manga Pallete Palette https://lospec.com/palette-list/manga-pallete, the others are hues of greyscale.
-- overall, I didn't change much the design and appearance of these 2 pages, I tried to focus more on providing feedback, interaction and other useful elements.  
+- overall, I didn't change much the design and appearance of these 2 pages, I tried to focus more on providing feedback, interaction and other 
+  useful elements.  
 - I wanted to style the load link in a subtle and minimal way, so that it looks more like a clean button rather than an actual link (id #load-link). 
-- The load throbber is animated with @keyframes loadthrobber (at the bottom of this code). Each percentage of the animation has a different width value, so that the load throbber progresses in length from the middle to both sides (left and right) as the page progresses to fake load. 
+- The load throbber is animated with @keyframes loadthrobber (at the bottom of this code). Each percentage of the animation has a different width value, 
+  so that the load throbber progresses in length from the middle to both sides (left and right) as the page progresses to fake load. 
+- I also changed the family font to 'Cormorant Garamond', serif, which is very slim, elegant and effective. 
 This one CSS file is imported into both index.html AND hosono.html so you need to be careful that it 
   works for both.
 */

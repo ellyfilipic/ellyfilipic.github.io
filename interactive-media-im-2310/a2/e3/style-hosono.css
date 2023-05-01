@@ -1,9 +1,16 @@
 
 /* COMMENTS FOR THI CSS CODE ARE BELOW: 
 (I added this CSS document to the folder in order to add styling to hosono.html)
-- I decided to style the dropdown menu with only --col-01 and 03 (plus #298cfd - see comments below - and blueviolet as a background colour when one of the items is :active). I also added some box-shadow, rounded corners to make it look more elegant and accessible (shapes affect our perception as well as colours, and round corners, lines and shapes appear to be more accessible, effective, recognisable). 
-- I used also #298cfd to style the colour of the <a> elements; as the original colour seemed to be too dark and dull to read in dark mode
+- I decided to style the dropdown menu with only --col-01 and 03 (plus #298cfd - see comments below - plus blueviolet as a background colour 
+when one of the items is :active). I also added some box-shadow, rounded corners to make it look more elegant and accessible (shapes affect 
+our perception as well as colours and text; round corners, lines and shapes appear to be more accessible, effective, recognisable). The menu button, 
+menu content and menu filters all have rounded corners and on hover effects (either change of colour of font size). This is to provide better feedback 
+to the users and give an idea of whther the button in on hover, on click on in default mode. The colour palette works in both light and dark mode. 
+- I used also #298cfd to style the colour of the <a> elements; as the original colour seemed to be too dark and dull to read in dark mode. 
 - In order to create a minimal and monochromatic colour palette, using shades taken from the greyscale.  https://lospec.com/palette-list/manga-pallete 
+- the switch mode icon is a png file, to which I implemented some animation (rotation Y on hover) and some lines of javascript in the modeSwitch.js as well. 
+- I also styled the back to top button, even though it was not required. I thought it would better to adapt it to the overall aesthetics of the page (adding 
+border, on hover effect and on click :active pseudoclass). 
 */
 
 :root{
