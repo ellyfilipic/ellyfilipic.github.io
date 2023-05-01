@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 
-<!-- 
+<!-- ALL HTML COMMENTS FOR HOSONO.HTML ARE BELOW: 
 
   PROVIDE MEANINGFUL FEEDBACK TO THE FOLLOWING ELEMENTS:
-  1) DONE <button> with the id of load-link on the loading page (index.html)
-  2) DONE <div> with the id of load-throbber on the loading page (index.html)
-  3) DONE <li> inside of the <ol> inside of the <nav> on the information page (hosono.html)
-  4) DONE <button> with the id of mode-button on the information page (hosono.html)
-  5) DONE switchModes() function - hint you can add a transition CSS property to the <body> and it will be inherited 
-     by all the elements inside, so when custom CSS variables are changed it will apply transition
+  3) <li> inside of the <ol> inside of the <nav> on the information page (hosono.html). The original menu was only an ordered list of elements; I made quite a few changes to that to make it look more like an actual dropdown menu instead of just a list of items. I believe this is also a good way to put the elements in an easy visual order and design information in a way that it appears effective, efficient and easy to find. Therefore I replaced the <ol> and <li> with some <div> elements instead to further customise the menu with css as well. WHen hovering on the menu button, the dropdown menu content is quite long, therefore to make sure it doesn't cover too much of the paragraph below it, I aligned the text of that first paragraph to the center. 
+  4) <button> with the id of mode-button on the information page (hosono.html). So because this page is already full of text and headings, I wanted to mae this button stand out and be recognisable. Because of its sticky position, the button is always visible in the top right corner; the text "dark or light mode" easily overlaps with the paragraphs of the page, it is not clearly recognisable and can create some confusion. Therefore I decided to replace the text with a small icon, to indicate that there's a change mode button. When scrolling up and down the page, this png icon is always visible and clear. 
+  5) switchModes() function - I added a smooth linear transition that appears when clicking on the change mode button and switching between dark and light mode. 
 
 -->
 
@@ -22,7 +19,7 @@
       this file contains some CSS that removes the default HTML feedback of the elements you need to work on - please
       leave this import as it is and don't change anything in the CSS file called feedbackReset.css
     -->
-    <link rel="stylesheet" type="text/css" href="feedbackReset.css">
+    <link rel="stylesheet" type="text/css" href="style-hosono.css">
 
     <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -40,18 +37,16 @@
 
   <body>
     <!-- The function switchModes() is declared in the file modeSwitch.js -->
-    <!-- Style this button for better feedback -->
     <button onclick="switchModes()" id="mode-button"><img class="img-mode-button" src="img/dark-mode.png" width="27" height="27"></button>
 
     <header>
+     
       
   
   <!-- Menu next to the heading -->
   
   <div class="menu" style="margin-bottom: 1%;">
       <nav>
-
-          <!-- Apply feedback to this menu -->
         <div class="dropdown">
         <button class="menubutton"><img src="img/hamburger.png" width="23" height="23"></button>
         <div class="dropdown-content">

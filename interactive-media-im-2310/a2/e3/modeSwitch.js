@@ -35,7 +35,7 @@ function switchModes(){
     // then we want to update our underlying custom CSS variables
     document.documentElement.style.setProperty("--col-01", darkCol);
     document.documentElement.style.setProperty("--col-02", lightCol);
-    // keep the same icon when switching between modes
+    // keep the same icon when switching between modes. I replaced the text "light and Dark mode" with an icon
     var img = document.createElement("img");
     img.src = "dark-mode.png";
     var block = document.getElementById("mode-button");
