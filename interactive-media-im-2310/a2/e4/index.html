@@ -1,46 +1,76 @@
 <!DOCTYPE html>
-    <!--when browser reads this page, this tag tells the browser that is a html document and has to be rendered as an html structure. it won't appear to users-->
 
-    <!-- HTML tag is a container. html is about container (html ,head, body) and lang defines the language you are writing in, which is useful for audible version
-    of the website for deaf-->
 <html lang="en">
 
 
+<!-- about deisigning features, completing, changing, designing existing features and adding 1 of your own. THink about their affordances and signifiers -->
+  <head>
 
-       <head> 
-            <!-- the head tag refers to all medadata of the page. wont be shown on the window or website, but gives instructions to the browser about metadata
-        referred to the website (such as links, css docs, javascript docs, google fonts links....). space margin on the left helps remember that head is in container htmml-->
-    
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Player Experiment</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="playerControls.js" defer></script>
 
-        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-                <!--character set explains what sort of letter, numbers, symbols you will include in the website and utf 8 encodes most of them
-        name="viewport" content="width=device-width, initial-scale=1.0 all refer to width of the webpage when it loads on different devices. Enforces
-        correct scaling (either up or down) to make the page responsive.-->
+  </head>
 
-       
-        <link rel="stylesheet" href="style.css">
+  <body>
 
+    <!-- this element holds all of the media player -->
+    <div class="video-player-wrapper">
+      <!-- this element holds the video element and the overlay -->
+      <div class="video-element-wrapper">
 
-          <script src="script.js"></script>
-                    <!--to link js docs, use script tag instead of link tag. used specifically for js, thats why we dont have to specify its a javascript, browser recognises what it is by using script tag-->
-       
+        <video id="videoElement" controls>
+         <!-- <video id="video" preload="none"></video> --> 
+          <source src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4" type="video/mp4">
+        </video>
 
-    </head>
+        <img id="videoPlayOverlay" src="./icons/play.svg">
 
-
-
-
-
-
-    <body>
-
-        <h1>This is the first heading</h1>
+      </div>
+      <!-- this element holds all of the custom controls -->
+      <div class="video-controls-wrapper" id="controlsWrapper">
 
 
 
 
 
+<div class="grid-of-controls">
 
-</body>
+ <!-- Mute/unmute button -->     
+ <button class="video-control-button" id="muteButton"></button>
+
+
+<div class="controls1">
+<!-- Rewind button -->
+<button class="video-control-button" id="rewindButton"  onclick="rewind(-15)"></button>
+
+<!-- PLay/pause button -->
+        <button class="video-control-button" id="playButton"></button>
+
+<!-- Fast forward button -->
+<button class="video-control-button" id="fastForwardButton"  onclick="fastForward(+15)"></button>
+</div>
+
+
+
+ <!-- Full screen button -->     
+ <button class="video-control-button" id="fullScreenButton"></button>
+</div>
+
+
+
+
+
+
+<!-- Progress Bar has a flex grow -->
+        <progress class="video-progress-bar" id="progressBar" value="0"></progress>
+
+      </div>
+
+    </div>
+
+
+  </body>
 
 </html>
