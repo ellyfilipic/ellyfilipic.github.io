@@ -3,7 +3,15 @@
 <html lang="en">
 
 
-<!-- about deisigning features, completing, changing, designing existing features and adding 1 of your own. THink about their affordances and signifiers -->
+<!-- about deisigning features, completing, changing, designing existing features and adding 1 of your own. 
+  THink about their affordances and signifiers 
+Customise the provided media player code (see Week 8 canvas module) through CSS styling and the addition of one extra feature of your choice.
+
+Your media player must make use of the approaches laid out in the previous exercises, including attention to a defined and cohesive styling, responsive layout, visual hierarchy, relevant feedback and context appropriate usability.
+
+Your code commenting should focus on the technical implementation and design choices related to your chosen extra feature including a description of why that feature was the most appropriate choice in relation to the context.
+
+Your code commenting should reflect on your interface design - why is the extra feature you picked important to the overall usability?-->
   <head>
 
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +25,13 @@
 
     <!-- this element holds all of the media player -->
     <div class="video-player-wrapper">
-      <!-- this element holds the video element and the overlay -->
+      <!-- this element holds the video and the overlay -->
       <div class="video-element-wrapper">
+        
+
+<progress class="video-progress-bar" id="progressBar" value="0"></progress>
+
+
 
         <video id="videoElement" controls>
          <!-- <video id="video" preload="none"></video> --> 
@@ -32,9 +45,7 @@
       <div class="video-controls-wrapper" id="controlsWrapper">
 
 
-
-
-
+<!-- customised features -->
 <div class="grid-of-controls">
 
  <!-- Mute/unmute button -->     
@@ -51,20 +62,14 @@
 <!-- Fast forward button -->
 <button class="video-control-button" id="fastForwardButton"  onclick="fastForward(+15)"></button>
 </div>
-
+</div>
 
 
  <!-- Full screen button -->     
  <button class="video-control-button" id="fullScreenButton"></button>
-</div>
 
 
 
-
-
-
-<!-- Progress Bar has a flex grow -->
-        <progress class="video-progress-bar" id="progressBar" value="0"></progress>
 
       </div>
 

@@ -1,11 +1,17 @@
+/* So i am styling my media player page to have a modern, minimal interface, similar to Spotify. I wanted the UI to look as minimal as possible so that I could focus more on the interactions, feedback and features.
+Therefore I decided to align the 3 main controls (play, rewind and forward) together in a same <div> elements at the center of the video player. 
+The other 2 controls (full screen and mute/unmute, are at the side of the video player, one on the right the other on the left. 
+I added some solid border to the video player wrapper, to give a more defined look to the frame and make it stand out from the background without changing yoo much of the original interface. 
+I changed the color of the progress bar to a light green (to make it stand out and create contrast witht he blue and violet shades of the video.). I added some border radius and solid border to the progress bar as well, so that users can better notice its progress throughout the video. 
+Moreover, I moved the progress bar from being at the bottom of the video player frame, to begin at the top of the controls bar, and reduced its height (very similar to the thin pprogress bar we can see in Youtube and Spotify)*/
 
-/* CHANGE THE CSS TO STYLE THE PAGE AS U LIKE AND INTERGRATE IT IN THE DESIGN SYSTEM OF THE PAGE, ADDING, CHANGING, STYLIGN PAGE TO AN APPROPRIATE STYLE OF INTERFACE */
+
 
 *{
   box-sizing: border-box;
   background-origin: border-box;
   margin: 0;
-  background-color: var(--col-05);
+  background-color: var(--col-02);
 }
 
 /* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
@@ -26,6 +32,7 @@
   flex-direction: column;
   width: 50%;
   margin: 8% auto;
+  border: solid 2px var(--col-01);
 }
 
 /* becuase I want to overlay the play icon on the video they need to be in their own wrapper */
@@ -42,6 +49,7 @@
 }
 
 #videoPlayOverlay{
+  z-index: 1;
   width: 8rem;
   height: 8rem;
   grid-column: 1/2;
@@ -54,7 +62,9 @@
 
 .video-controls-wrapper{
   display: flex;
+  float: right;
   justify-content: center;
+  background-color: var(--col-02);
 }
 /* this overwrites the above display:flex - something which is then undone when the JS loads */
 #controlsWrapper{
@@ -114,16 +124,19 @@
 
 
 .grid-of-controls{
-z-index: 2;
+ z-index: 2;
  display: grid;
  display: flex;
  width: 100%;
+ background-color: var(--col-02);
 }
 
 
 .controls1{
+z-index: 3;
 position: relative;
-padding-left: 33%;
+padding-left: 42%;
+background-color: var(--col-02);
 }
 
 
@@ -137,7 +150,7 @@ padding-left: 33%;
   -moz-appearance: none;
   appearance: none;
   border: none;
-  height: 1rem;
+  height: 0.6rem;
   width: 100%;
   flex-grow: 1;
   cursor: pointer;
@@ -153,7 +166,9 @@ padding-left: 33%;
   box-shadow: 0 1px 2px var(--col-02) inset;
 }
 ::-webkit-progress-value {
-  background-color: var(--col-02);
+  background-color: var(--col-04);
+  border: solid 1px;
+  border-radius: 30px;
 }
 
 .timeline-loading{

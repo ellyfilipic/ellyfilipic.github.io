@@ -211,9 +211,6 @@ fastForwardButton.addEventListener("click", fastForward);
 
 
 
-
-
-
 /* MY DESIGNED FEATURE 1 : Volume bar */
 function volumeBar(){
   // https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/muted
