@@ -3,15 +3,52 @@
 <html lang="en">
 
 
-<!-- about deisigning features, completing, changing, designing existing features and adding 1 of your own. 
-  THink about their affordances and signifiers 
-Customise the provided media player code (see Week 8 canvas module) through CSS styling and the addition of one extra feature of your choice.
+<!-- ALL COMMENTS FOR THIS HTML PAGE ARE BELOW: 
+- For this assignment I decided to customise the media player to look colourful and basic, in line with the aesthetics of the video. The music 
+reminds me of some videogame or anime soundtrack, and usually the visuals for both those genres are very colourful and right, so I wanted the whole 
+UI of the mediaplayer to reflect the aesthetics and style. Therefore I chose to include coloured icons and coloured progress bar. 
+I also wanted the UI to look as minimal as possible so that I could focus more on writing some js for the interactions, feedback and features.
+- My added feature is the volume range. I want users to be able to move the handle of the volume bar to adjust the volume of the video whenever
+they like. Users can drag up and down  the handle, to adjust the volume of the media player. I think this is a pivotal feature that users need 
+when playing a multimedia file. Especially in this case, where the media player seems to have a loud volume, so I believe it's important to let 
+the users choose and  adjust this feature according to their needs. The volume bar goes from 1 to a maximum value of 100 and users can adjust the 
+volume by dragging the handle up and down across the volume range, which is coloured in a light blue taken from the colour palette below so it's 
+easy to recognise. When the volume handle is brought back to 0, the volume range becomes empty (visual feedback showing that the volume is off). 
+On the other hand, as the volume increases, the bar as well slides to a darker blue, to indicate a visual feedback that the volume is being turned on and up.  
+Moreover, the volume range is placed on the bottom left side of the media player frame, so it's immediately easy and quick to find, access and engage with. 
+This article https://balsamiq.com/learn/articles/button-design-best-practices/ explains why it's good to include important buttons on the bottom left of the 
+page to attract the viewer's attention and make them enage with that action. 
+- As I took inspiration from the layout of Spotify mobile and web app, I tried to group together in a separate <div> the 3 main control tools: rewind, play, 
+  forward. These 3 controls are aligned at the center of the controls toolbar so users can find them easily and quickly (efficiency) and are easy to remeber. 
+  The other 2 controls (mute/unmute and volume range, are at the side of the video player, on the bottom left side. Having all the controls placed on one line 
+  in the toolbar, allows the users to navigate and enage with the multimedia player actively, easily and dynamically. 
+- Moreover, the play/pause button is probably the one that users engage with the most, as it allows them to interact and view the audiovisual product; therefore, 
+in order to give extra importance to this button, I placed it at the very center of the controls bar and made it bigger (25 px in width and height instead of 22px 
+like all the other controls). This also allows to establish visual hierarchy and make only the important elements stand out. 
+- With regards to layout and grid design, I took inspiration from the UI of Spotify app, however I wanted it to be colourful to give it an original and different look
+to the media player, that can be in line with the colourful aesthetics of the video as well. Therefore I used coloured svg icons instead of flat design black icons. 
+- The progress bar has 3 linear gradient colours that match the page's colour palette. This also makes the progress bar stand out from the rest of the media player, 
+so that it is easy and quick to find. I also added some border and border radius to give a more pleasing look aesthetically, as rounded corners are generally more 
+pleasing to the eye compared to sharp corners. This also helps to visualise and follow along the progress of the bar, as the video plays on. 
+Users can also move the progress bar handle (at the end of the progress bar) to move between the various scenes of the mediaplayer both backwards and forward. Therefore 
+I tried to style the progress bar as best as I could (gradient colours, border, border radius) in order to make the progress line stand out, be instantly recognisable, 
+quick to click on and move along. 
+- Affordances and signifiers in the interface of the mediaplayer: each button is aligned and placed in a way in which users can interact effectively and efficiently with 
+each one of them. The forward and rewind button are placed respectively on the right and left side of the play button: as we can see in many famous video platforms like 
+Youtube and Spotify, the forward button is always on the right, as it indicates the action of going forward (and we start to read from the left, so everything that goes 
+forward in space, time or action, we tend to associate it and place it on the right side of the screen or page).I also tried my best to keep the buttons clear and effective, 
+to communicate clearly to the user what action is implied and linked to that button (for example when clicking on the play button, it switches to pause icon, when clicking 
+on forward or rewind button, the progreess bar as well moves forward or backwards, to give visual feedback to the user and confirm that their action is being processed. 
+- I added cursor:pointer to all the buttons in the toolbar: this is a very basic, yet still effective way of providing visual feedback when hovering on a button, and indicates 
+that the button can be clicked on in order to perform an action.  
+- I believe that overall this media player interface is quite complete, effective and efficient. It contains the main controls that users want to find quickly (and efficiently) 
+when interacting wwith an audiovisual file: play, pause, mute/unmute, volume range adjustments, rewind and forward (I believe these last two buttons are particularly useful in 
+this case, as the video is quite long and users might want jump back or forward to view only particular moments of the video). 
+(I wanted to add a feature that the volume range would appear only on click: when clicking on the mute button, the volume bar would be revealed - slide - in the toolbar, and only 
+then could users adjust the volume. However this required some further code that I didn't have enough time to write down, unfortunately). 
+ -->
 
-Your media player must make use of the approaches laid out in the previous exercises, including attention to a defined and cohesive styling, responsive layout, visual hierarchy, relevant feedback and context appropriate usability.
 
-Your code commenting should focus on the technical implementation and design choices related to your chosen extra feature including a description of why that feature was the most appropriate choice in relation to the context.
-
-Your code commenting should reflect on your interface design - why is the extra feature you picked important to the overall usability?-->
   <head>
 
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +66,7 @@ Your code commenting should reflect on your interface design - why is the extra 
       <div class="video-element-wrapper">
         
 
-<progress class="video-progress-bar" id="progressBar" value="0"></progress>
+    <progress class="video-progress-bar" id="progressBar" value="0"></progress>
 
 
 
@@ -37,27 +74,38 @@ Your code commenting should reflect on your interface design - why is the extra 
          <!-- <video id="video" preload="none"></video> --> 
           <source src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/miac.mp4" type="video/mp4">
         </video>
+        
+ 
 
-        <img id="videoPlayOverlay" src="./icons/play.svg">
+      <img id="videoPlayOverlay" src="./icons/play.svg">
 
       </div>
       <!-- this element holds all of the custom controls -->
       <div class="video-controls-wrapper" id="controlsWrapper">
 
 
-<!-- customised features -->
-<div class="grid-of-controls">
+      <!-- customised features -->
+      <div class="grid-of-controls">
 
- <!-- Mute/unmute button -->     
- <button class="video-control-button" id="muteButton"></button>
+      <!-- Mute/unmute button -->     
+      <button class="video-control-button" id="muteButton"  onclick="getVolume()"></button>
 
 
+
+          <!-- Volume range button (my feature)-->
+
+          <input id="volumeControl" type="range" min="0" max="100" step="1" oninput="thisVolume(this.value)" onchange="thisVolume(this.value)"></input>
+
+
+
+
+<!-- I grouped these 3 controls in one div to align them at the middle of the toolbar, as they are the most important and frequently used when viewing a video-->
 <div class="controls1">
 <!-- Rewind button -->
 <button class="video-control-button" id="rewindButton"  onclick="rewind(-15)"></button>
 
 <!-- PLay/pause button -->
-        <button class="video-control-button" id="playButton"></button>
+<button class="video-control-button" id="playButton"></button>
 
 <!-- Fast forward button -->
 <button class="video-control-button" id="fastForwardButton"  onclick="fastForward(+15)"></button>
@@ -65,15 +113,12 @@ Your code commenting should reflect on your interface design - why is the extra 
 </div>
 
 
- <!-- Full screen button -->     
- <button class="video-control-button" id="fullScreenButton"></button>
+
+</div>
+</div>
 
 
 
-
-      </div>
-
-    </div>
 
 
   </body>

@@ -88,12 +88,12 @@ function playPause(){
     // if it isn't already playing make it play
     videoElement.play();
     // then make sure the icon on the button changes to pause indicating what it does if you click it
-    playButton.style.backgroundImage = "url('./icons/pause.svg')";
+    playButton.style.backgroundImage = "url('./icons/pauseButton.svg')";
   } else {
     // if it is already playing make it pause
     videoElement.pause();
     // then make sure the icon on the button changes to play indicating what it does if you click it
-    playButton.style.backgroundImage = "url('./icons/play.svg')";
+    playButton.style.backgroundImage = "url('./icons/playButton.svg')";
   }
 }
 
@@ -211,43 +211,14 @@ fastForwardButton.addEventListener("click", fastForward);
 
 
 
-/* MY DESIGNED FEATURE 1 : Volume bar */
-function volumeBar(){
-  // https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/muted
-  //how do we mute this button? below
-  // this is a  boolean value. true means muted and false means not muted. so we use an if statement 
-console.log("mute/unmute"); /* checks if function is working properly in the inspect web online  */
-  if (videoElement.muted) /*if videoelement IS muted */{
-  videoElement.muted = false; 
-  muteButton.style.backgroundImage = "url('./icons/mute.svg')";
-  } else {
-  videoElement.muted = true; 
-  muteButton.style.backgroundImage = "url('./icons/unmute.svg')";
-  }
- }
-/* This line below is what tells the browser to show the icon */
- muteButton.addEventListener("click", muteUnmute); 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* MY DESIGNED FEATURE : Volume bar */
+function thisVolume(volume_value)
+    {
+        var myvideo = document.getElementById("videoElement");
+        document.getElementById("volumeControl").innerHTML=volume_value;
+        myvideo.volume = volume_value / 100;
+        
+    }
 
 
 

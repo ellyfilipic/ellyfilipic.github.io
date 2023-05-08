@@ -1,9 +1,11 @@
-/* So i am styling my media player page to have a modern, minimal interface, similar to Spotify. I wanted the UI to look as minimal as possible so that I could focus more on the interactions, feedback and features.
-Therefore I decided to align the 3 main controls (play, rewind and forward) together in a same <div> elements at the center of the video player. 
-The other 2 controls (full screen and mute/unmute, are at the side of the video player, one on the right the other on the left. 
-I added some solid border to the video player wrapper, to give a more defined look to the frame and make it stand out from the background without changing yoo much of the original interface. 
-I changed the color of the progress bar to a light green (to make it stand out and create contrast witht he blue and violet shades of the video.). I added some border radius and solid border to the progress bar as well, so that users can better notice its progress throughout the video. 
-Moreover, I moved the progress bar from being at the bottom of the video player frame, to begin at the top of the controls bar, and reduced its height (very similar to the thin pprogress bar we can see in Youtube and Spotify)*/
+/* - OTHER CSS COMMENTS HERE:
+-I added some solid border to the video player wrapper, to give a more defined look to the frame and make it stand out from the 
+background (without adding too many other visual elements on the page, and keep the interface clean and efficient).
+- I changed the color of the progress bar to a linear gradient with 3 different hues that blend in together as the progress bar moves 
+along. This is to make it stand out, create an overlay effect and make contrast with the blue and violet shades of the video. I added 
+some border radius and solid border to the progress bar as well, so that users can better notice its progress throughout the video. 
+- Moreover, I moved the progress bar from being at the bottom of the video player frame, to being at the top of the controls bar, and 
+also reduced its height (to make it similar to the thin progress bar we can see on Youtube and Spotify)*/
 
 
 
@@ -20,10 +22,11 @@ Moreover, I moved the progress bar from being at the bottom of the video player 
 :root{
   --col-01:#0b0e0e;
   --col-02:#f0f6f0;
-  --col-03:#5252ff;
+  --col-03:#4d7cff;
   --col-04:#b6e878;
   --col-05:#bcbdbc;
   --col-06:#6f6f6f;
+  --col-07: #fc4949; 
   --border: 1px solid var(--col-02);
 }
 
@@ -60,16 +63,7 @@ Moreover, I moved the progress bar from being at the bottom of the video player 
   display: none;
 }
 
-.video-controls-wrapper{
-  display: flex;
-  float: right;
-  justify-content: center;
-  background-color: var(--col-02);
-}
-/* this overwrites the above display:flex - something which is then undone when the JS loads */
-#controlsWrapper{
-  display: none;
-}
+
 
 .video-control-button{
   width: 2rem;
@@ -89,9 +83,9 @@ Moreover, I moved the progress bar from being at the bottom of the video player 
 }
 
 #playButton{
-  background-image: url('./icons/play.svg');
-  width: 22px;
-  height: 22px;
+  background-image: url('./icons/playButton.svg');
+  width: 25px;
+  height: 25px;
 }
 
 #muteButton{
@@ -114,28 +108,41 @@ Moreover, I moved the progress bar from being at the bottom of the video player 
   height: 22px;
 }
 
-#fullScreenButton{
-  display: flex;
-  float: right;
-  background-image: url('./icons/fullScreen.svg');
-  width: 22px;
-  height: 22px;
-}
 
+
+
+
+/* controls code */
+
+.video-controls-wrapper{
+  display: flex;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2px;
+  justify-content: center;
+  background-color: var(--col-02);
+}
+/* this overwrites the above display:flex - something which is then undone when the JS loads */
+#controlsWrapper{
+  display: none;
+}
 
 .grid-of-controls{
  z-index: 2;
  display: grid;
  display: flex;
  width: 100%;
+ height: 33px;
+ padding-top: 2px;
  background-color: var(--col-02);
 }
-
 
 .controls1{
 z-index: 3;
 position: relative;
-padding-left: 42%;
+padding-left: 30%;
+padding-top: 0px;
 background-color: var(--col-02);
 }
 
@@ -154,7 +161,7 @@ background-color: var(--col-02);
   width: 100%;
   flex-grow: 1;
   cursor: pointer;
-  background-color: var(--col-01);
+  background-color: var(--col-04);
   box-shadow: 0 1px 2px var(--col-02) inset;
 }
 ::-moz-progress-bar {
@@ -170,6 +177,35 @@ background-color: var(--col-02);
   border: solid 1px;
   border-radius: 30px;
 }
+
+progress[value]::-webkit-progress-value{
+  background-image: 
+
+  -webkit-linear-gradient(-45deg, 
+  rgba(0, 0, 0, .1) 33%, 
+  rgba(0,0, 0, .1) 66%, transparent 66%),
+
+-webkit-linear-gradient(top, 
+  rgba(255, 255, 255, .25), 
+  rgba(0, 0, 0, .25)),
+
+-webkit-linear-gradient(left, #5252ff, #b6e878, #fc4949);
+}
+
+
+
+
+input {
+  cursor: pointer;
+    margin: 0.4rem;
+    height: 10px;
+    width: 60px;
+    color: var(--col-07);
+}
+
+
+
+
 
 .timeline-loading{
   background-image: -moz-repeating-linear-gradient(45deg, var(--col-03) 0% 2%, transparent 2% 4%, red 4%);
