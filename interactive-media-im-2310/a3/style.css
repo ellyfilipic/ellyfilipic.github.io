@@ -1,8 +1,94 @@
+
+/* I wanteed the overall home/loading page to feel like the interface of a Nintendo videogame homescreen, a kind of cartoonish style very popular in the late 2000s. Therefore the UI looks colourful, cartoonish, images have rounded corners, coloured and solid borderd and defined lines. */
+
 html{
-    background-color: rgb(244, 244, 244);
-}
+    background-color: var(--col05);    
+    }
+    
+    *{
+        box-sizing: border-box;
+
+    }
 
 
-h1{
-    color: blue;
-}
+
+    body {
+        cursor: url(‘img/love-pixels.png’), auto;
+  }
+
+
+
+    /* This colour palette contains the same shades of colours I used in Adobe Illustrator to create the main visual assets. All colours are inspired by real devices I use to play with in my childhood ^^ */
+    :root{
+        --col01: #080808;
+        --col02: #F8F7F9;
+        --col03: #E100ED;
+        --col04: #6404AF;
+        --col05: #dfff2a;
+    }
+ 
+
+    h1{
+        font-family: 'Pacifico', cursive;
+        text-align: center;
+        color: var(--col03);
+        text-decoration: underline var(--col04);
+    }
+
+
+/* I wanted to style this button to make it look more like a videogame menu button: wide, low value for the height so thta it appears long and thin; coloured and orunded border; vibrant colours; bright colour on hover, to make contrast with the white text. Reference and inspiration: https://www.dreamstime.com/collection-vector-buttons-mobile-games-image185347689  */
+    h3{
+        font-family: 'Pangolin', cursive;
+        font-size: 12px;
+        text-align: center;
+        color: var(--col03);
+        background-color: var(--col02);
+        border: var(--col04) solid 2px;
+        border-radius: 30px;
+        width: 15%;
+        margin-left: 43%;
+        box-shadow: var(--col04) 1px 7px 1px;
+        cursor: pointer;
+    }
+    h3:hover{
+        background-image: linear-gradient(#E100ED, #F8F7F9);
+        width: 15%;
+        font-size: 14px;
+        color: var(--col02);
+        box-shadow: none;
+    }
+
+
+/* fade out bacjground animation */
+    .backgroundimg {
+      display: flex;
+      width: 28%;
+      height: 28%;
+      margin-left: 35%;
+      margin-top: 5%;
+   /*    animation: fade-out 5s linear 1 forwards;
+      background-repeat: no-repeat; */
+    }
+    
+  
+    
+    @keyframes fade-out{
+        0%{
+            opacity: 100%;
+        }
+        40%{
+            opacity: 60%;
+        }
+        80%{
+            opacity: 20%;
+        }
+        100%{
+            opacity: 0%;
+            display: none;
+            overflow: hidden;
+            visibility: hidden;
+        }
+    }
+    
+    
+    

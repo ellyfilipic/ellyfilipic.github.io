@@ -1,46 +1,66 @@
 <!DOCTYPE html>
-    <!--when browser reads this page, this tag tells the browser that is a html document and has to be rendered as an html structure. it won't appear to users-->
 
-    <!-- HTML tag is a container. html is about container (html ,head, body) and lang defines the language you are writing in, which is useful for audible version
-    of the website for deaf-->
 <html lang="en">
 
 
 
        <head> 
-            <!-- the head tag refers to all medadata of the page. wont be shown on the window or website, but gives instructions to the browser about metadata
-        referred to the website (such as links, css docs, javascript docs, google fonts links....). space margin on the left helps remember that head is in container htmml-->
-    
 
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-                <!--character set explains what sort of letter, numbers, symbols you will include in the website and utf 8 encodes most of them
-        name="viewport" content="width=device-width, initial-scale=1.0 all refer to width of the webpage when it loads on different devices. Enforces
-        correct scaling (either up or down) to make the page responsive.-->
-
-       
+ 
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="interwoven-feedback.html">
 
-
-          <script src="script.js"></script>
-                    <!--to link js docs, use script tag instead of link tag. used specifically for js, thats why we dont have to specify its a javascript, browser recognises what it is by using script tag-->
+      <script src="fade-script.js"></script>    
        
 
     </head>
 
 
+<title>A3 - Interwoven Feedback</title>
+<!-- I HAVE INCLUDED BELOW THE MAIN COMMENTS OUTLINING THIS PROJECT. However, more specific comments explaining each specific interaction, element or component of the page, are added next to the related chunk of code, in each code document -->
 
+<!-- I chose 2 principles to creare this project, from the list provided on canvas: Feedback (as a design principle) and Interwoven (as an adjective). I am using these two principles to create an interactive, audiovisual vintage experience. Therefore 'Interwoven Feedback' is the name I chose for this page. Therefore my research quesiton and starting point for this final experiment, is to further investigate how can audio help, enhance, narrate and contextualise web-based experiences for a more interactive and immersive feedback. 
+- With this project, I am trying to better study and understand the roles, possibilities and opportunities that music (and audio more broadily) can play iin an interactive web-based media project. THere are not many examples of music played online, especially in websites, as music in this case is considered to be too distracting from the visual content (which happens to be the main focus of every website). 
+- My aim is to create an audiovisual experience to provide complete audiovisual feedback the users' actions, when they trigger the specific interactive elements set on the page. The page has plain 2D images /sketches in the background, in the style of low-fi, paper mockups and wireframes, to keep the visuals clean and simple and focus more on the audio instead. Each of these 3 main sketches contain other interactive elements (that are shown as being coloured 2.5D items, to catch the viewers' attention.). Users can interact with these elements, by simply clicking, dragging, and double cliccking on them, to receive different kinds of feedback in responsse to that specific action. 
+The topic of the page is digital technologies in the lqate 2000's / early 2010's, that are now almost vintage devices. Therefore the overall audiovisual style of the page resembles the vintage design trends of the time (colours, black outlines, rounded corners, thick typeface, bubbly graphics, pixel art), as shown here: 
+- https://www.envato.com/blog/y2k-aesthetic/#:~:text=What%20Is%20the%20Y2K%20Aesthetic,as%20the%20eye%20could%20see.  
+- https://dribbble.com/stories/2022/06/02/y2k-design-trends 
+In line with these design trends, I also customised the pointer(cursor) to be the icon of a pixel. 
+The devices shown in the page are: a Game Boy Advance (on the let), an mp3 media player (at the center of the composition), a qtek 9100 phone (on the right)
+-->
 
+    
+<body>
 
+    <!-- container: 2D background image ann interactive items-->
+    <img id="backgroundimg" class="backgroundimg" src="img/loading-background.png" alt="background image showing sketches of an old gameboy console, an mp3 media player and and old mobile phone.">
 
-    <body>
+    <h1>Interactive Experiment</h1>
+    <a href="interwoven-feedback.html" style="text-decoration: none;"><h3>Click To Start </h3></a>
 
-        <h1>This is the first heading</h1>
-
-
-
+    <!-- mute/unmute button function - to mute or unmute the electronic background music loop playing automatically when loading the homepage -->
+    <button style="border: #dfff2a;"><img src="img/music.png" alt="icon of mute/unmute button"></button>
 
 
 
 </body>
 
 </html>
+
+
+
+
+
+
+    <!-- <div>
+    <button><img role="button" class="overlay2" src="img/1x/mp3-play-button.png" alt="mp3 play button"></button>
+</div>   
+OR  
+
+<a onclick="document.getElementById('yourAudioTag').play();">
+     <img src="yourSrc.jpg">
+</a>
+
+-->
