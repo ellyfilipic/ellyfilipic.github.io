@@ -1,4 +1,7 @@
 
+/* Audio effects such as reverb, volume, gaina nd so on will be added to further stylize and edit each audio track.  */
+
+
 // audio context, get source connect to audio content and final destination
 
 const audioCtx = new AudioContext (); 
@@ -47,7 +50,38 @@ buttons.forEach(button => {
 });
 
 
+/* $(document).ready(function () {
+  var playing = true;
+  $('playButton').click(function () {
+   if (playing == false) {
+    document.getElementById('track1').play();
+    playing = true;
+    $(this).text("Stop Sound");
+ 
+   } else {
+    document.getElementById('track1').pause();
+    playing = false;
+    $(this).text("Restart Sound");
+   }
+  });
+ });
 
-// async function means wait and see if function runs on web 
-// set interval to run function in sequence, randomly. 
-// run clearInterval when u want to stop the loop after a set amount of time
+ */
+
+
+ function Play()
+      {
+        var myAudio = document.getElementById("track1");
+        if(myAudio.paused) {
+            myAudio.play();
+        }
+        else {
+           myAudio.pause();
+        }
+      }
+
+
+function pauseMusic()
+    {
+      
+    }

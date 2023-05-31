@@ -23,8 +23,9 @@ The aim is to create an audiovisual feedback experience to the users' actions, w
 The topic of the page is digital technologies in the lqate 2000's / early 2010's, that are now almost vintage devices. Therefore the overall audiovisual style of the page resembles the vintage design trends of the time (colours, black outlines, rounded corners, thick typeface, bubbly graphics, pixel art), as shown here: 
 - https://www.envato.com/blog/y2k-aesthetic/#:~:text=What%20Is%20the%20Y2K%20Aesthetic,as%20the%20eye%20could%20see.  
 - https://dribbble.com/stories/2022/06/02/y2k-design-trends 
+- https://99designs.com/blog/design-history-movements/design-through-the-decades/ 
 In line with these design trends, I also customised the pointer(cursor) to be the icon of a pixel. 
-The devices shown in the page are: a Game Boy Advance (on the let), an mp3 media player (at the center of the composition), a qtek 9100 phone (on the right)
+The devices shown in the page are: a Game Boy Advance (on the let), an mp3 media player (at the center of the composition)
 -->
 <title>A3 - Interwoven Feedback</title>
 
@@ -34,59 +35,105 @@ The devices shown in the page are: a Game Boy Advance (on the let), an mp3 media
 
     <h1>Interwoven Feedback</h1>
 
+<!-- Code a mockup of a Gameboy advance style videogame that users can interact with??????? -->
 
-<!-- container includes: 2D background images and interactive items-->
+
+
+
+
+<!-- container includes all images and interactive elements on the page-->
 <div class="container">
+    <!-- container for black and blue circles -->
+    <div class="black-blue-circles">
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <!-- large black circle below every other circle-->
+    <div id="box4"></div>
+    
+    <!-- 2 black, thin rectangles -->
+    <div class="rectangles"></div>
+    <div id="box5"></div>
+    <div id="box6"></div>
+    <!-- 3 coloured spheres rolling down -->
+        <div id="box7"></div>
+        <div id="box8"></div>
+        <div id="box9"></div>
+    <!-- bouncing ball-->
+        <div id="box10"></div>
+    <!-- glass shapes-->
+    <div id="box11"></div>
+    <div id="box12"></div>
+    <div id="box13"></div>
+    <!-- Coloured rectangle, below glass shapes -->
+    <div id="box14"></div>
+    <!-- first rectangle on the right -->
+    <div id="box15"></div>
+</div>
 
-        <!-- gameboy console controls and features -->
-        <!-- below is the function to let the images rotate and translate from their position to the middle of the page only  when on click-->
-    <div class="gameboy">
-        <img class="advance" src="img/advance.png" alt="image of a GameBoy Advance console">
-        <h3>Nintendo Gameboy Advance</h3>
-        <div class="overlay">
-            <img src="img/arrows.png" alt="gameboy arrows controls" height="100" width="100">
-        </div class="overlay2" >
-        <div>
 
-        </div>
+
+
+
+
+
+
+
+
+
+<!-- include 1st pop up here -->
+
+<!-- Pop up 1  -->
+<div id="popup-box" class="popup" onclick="popUp1()" style="margin-left: 0px; bottom: 40px;">1
+    <span class="popuptext" id="popup1" style="width: 300px;">All the visual elements in this page are interactive. You can interact with the visual elements in the page to experience an immersive audiovisual feedback. Hover and click on each one of them to in whichever order you prefer, to enjoy the interwoven audiovisual feedback.</span>
+  </div>
+  
+  
+
+  <!-- Pop up 2 -->
+  <div id="popup-box" class="popup" onclick="popUp2()" style="margin-left: 510px; top: 50px;">2
+      <span class="popuptext" id="popUp2" style="width: 350px;">Click on the small blue circle below to see a playful audiovisual effect.</span>
     </div>
-        
+  
+  
+
+    <!-- Pop up 3 -->
+  <div id="popup-box" class="popup" onclick="popUp3()" style="margin-left: 510px; top: 50px;">3
+    <span class="popuptext" id="popUp3" style="width: 350px;">Hover on the coloured circles, squares and triangles, listen to the sound effects they produce, and guess what materials they resemble the most!</span>
+  </div>
 
 
-    <!-- div contains mp3 image and mp3 controls and features -->
-    <div class="mp3">
-        <img class="mp3-player" src="img/mp3.png" alt="image of an mp3 media player">
-    <h3 class="mp3-heading">Mp3 Media Player</h3>
-   
-        <!-- Audio content: playing tracks when interacting with mp3 media player -->
-        <audio id="mp3Play" src="audio/exampleGame1.wav" ></audio>
 
-        <!-- mp3 play button. Click on this button to play music -->
-        <a onclick="document.getElementById('mp3Play').play();">
-            <!-- In order to provide better feedback, when clicking on the play button users can listen to the music track as well as switching to pause button, that they can click to stop the music from playing.--> 
-            <div class="mp3-play-button" >
-            <img src="img/1x/mp3-play-button.png" onclick="this.src='img/a.png';" ondblclick="this.src='img/1x/mp3-play-button.png';">
-            <!-- rewind and forward buttons and fucntions -->
-      
-            <img src="img/1x/rewind.png" style="margin-left: 15%;">
-            <img src="img/1x/forward.png"style="margin-left: 15%;">
-       
-            </div>
-        
-        </a>
-    </div>
+  
+    
+  
+  <!-- popup function script-->
+  <script>
+  function popUp1() {
+    var popup = document.getElementById("popup1");
+    popup.classList.toggle("show");
+  }
+  
+  function popUp2(){
+  var popup = document.getElementById("popUp2");
+  popup.classList.toggle("show");
+  }
+
+  function popUp3(){
+  var popup = document.getElementById("popUp3");
+  popup.classList.toggle("show");
+  }
+  </script>
+
 
 
  
-    <!-- Qtek 9100 phone-->
-        <div class="phone">
-            <img class="closed-phone" src="img/phone.png" alt="image of a Samsung Qtek 9100 phone">
-            <h3 class="phone-heading">Qtek 9100 Phone</h3>
-        <!-- <div class="overlay">
-                <img src="img/arrows.png" alt="gameboy arrows controls" height="100" width="100">
-             </div>  -->
-        </div>
-
+  
 
 </div>
 
+
+
+
+</body>
+</html>

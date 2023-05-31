@@ -18,7 +18,10 @@ html{
 
 
 
-    /* This colour palette contains the same shades of colours I used in Adobe Illustrator to create the main visual assets. All colours are inspired by real devices I use to play with in my childhood ^^ */
+    /* This colour palette contains the same shades of colours I used in Adobe Illustrator to create the main visual assets. All colours are inspired by real devices I use to play with in my childhood ^^ 
+    Together with the background music, the style of the buttons and the logo, the aesthetics of the homepage allow users to be immersed in the cartoonish and gaming-like vibe of the page from the very start. Overall, I tried my best to design the Ui of this page to look like a vintage videogame menu/settings page. 
+*/
+    
     :root{
         --col01: #080808;
         --col02: #F8F7F9;
@@ -32,63 +35,99 @@ html{
         font-family: 'Pacifico', cursive;
         text-align: center;
         color: var(--col03);
-        text-decoration: underline var(--col04);
+        text-decoration: none;
     }
 
 
+p{
+    font-family: 'Pangolin', cursive;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--col01);
+    text-align: center;
+}
+
 /* I wanted to style this button to make it look more like a videogame menu button: wide, low value for the height so thta it appears long and thin; coloured and orunded border; vibrant colours; bright colour on hover, to make contrast with the white text. Reference and inspiration: https://www.dreamstime.com/collection-vector-buttons-mobile-games-image185347689  */
-    h3{
+    .button1{
         font-family: 'Pangolin', cursive;
-        font-size: 12px;
+        font-size: 14px;
         text-align: center;
         color: var(--col03);
         background-color: var(--col02);
         border: var(--col04) solid 2px;
         border-radius: 30px;
         width: 15%;
+        margin-top: 3%;
         margin-left: 43%;
         box-shadow: var(--col04) 1px 7px 1px;
+        text-decoration: none;
         cursor: pointer;
     }
-    h3:hover{
+    .button1:hover{
         background-image: linear-gradient(#E100ED, #F8F7F9);
         width: 15%;
         font-size: 14px;
-        color: var(--col02);
+        color: #F8F7F9;
         box-shadow: none;
+        text-decoration: none;
     }
 
+    p{
+        margin-top: 2%;
+    }
 
-/* fade out bacjground animation */
+/* fade out background animation */
     .backgroundimg {
-      display: flex;
-      width: 28%;
-      height: 28%;
-      margin-left: 35%;
-      margin-top: 5%;
-   /*    animation: fade-out 5s linear 1 forwards;
-      background-repeat: no-repeat; */
+    display: flex;
+    margin-left: 33%;
+    margin-top: 5%; 
     }
-    
+
+
+/* pop up number */
+#box1{
+    position: relative;
+    display: inline-block;
+    color: var(--col02);
+    background-color: var(--col02);
+    border: solid 4px var(--col04);
+    border-radius: 30px;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    font-family: 'Pacifico';
+    font-size: 30px;
+    font-weight: bolder;
+    color: var(--col01);
+    cursor: pointer;
+    padding: 0px 20px; /* padding need around the numbers to leave some negative space between the numbers and border.  */
+}
+#box1:hover{
+    background: var(--col03);
+    color: var(--col02);
+}
+
+
+  /*  popup content */
+  .popup .popuptext {
+    visibility: hidden;
+    height: fit-content;
+    background-color: var(--col02);
+    color: var(--col01);
+    font-family: 'Pangolin', cursive;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 10px;
+    padding: 28px 5px;
+    position: absolute;
+    z-index: 1;
+    margin: 50%;
+  }
+
+
+/* hide and show */
+.popup .show {
+    visibility: visible;
+  }
   
-    
-    @keyframes fade-out{
-        0%{
-            opacity: 100%;
-        }
-        40%{
-            opacity: 60%;
-        }
-        80%{
-            opacity: 20%;
-        }
-        100%{
-            opacity: 0%;
-            display: none;
-            overflow: hidden;
-            visibility: hidden;
-        }
-    }
-    
-    
-    
+

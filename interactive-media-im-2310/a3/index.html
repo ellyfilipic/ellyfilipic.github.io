@@ -10,9 +10,11 @@
  
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+
         <link href="interwoven-feedback.html">
 
-      <script src="fade-script.js"></script>    
+      <script src="fade-script.js" defer type="module"></script>    
        
 
     </head>
@@ -23,25 +25,55 @@
 
 <!-- I chose 2 principles to creare this project, from the list provided on canvas: Feedback (as a design principle) and Interwoven (as an adjective). I am using these two principles to create an interactive, audiovisual vintage experience. Therefore 'Interwoven Feedback' is the name I chose for this page. Therefore my research quesiton and starting point for this final experiment, is to further investigate how can audio help, enhance, narrate and contextualise web-based experiences for a more interactive and immersive feedback. 
 - With this project, I am trying to better study and understand the roles, possibilities and opportunities that music (and audio more broadily) can play iin an interactive web-based media project. THere are not many examples of music played online, especially in websites, as music in this case is considered to be too distracting from the visual content (which happens to be the main focus of every website). 
-- My aim is to create an audiovisual experience to provide complete audiovisual feedback the users' actions, when they trigger the specific interactive elements set on the page. The page has plain 2D images /sketches in the background, in the style of low-fi, paper mockups and wireframes, to keep the visuals clean and simple and focus more on the audio instead. Each of these 3 main sketches contain other interactive elements (that are shown as being coloured 2.5D items, to catch the viewers' attention.). Users can interact with these elements, by simply clicking, dragging, and double cliccking on them, to receive different kinds of feedback in responsse to that specific action. 
-The topic of the page is digital technologies in the lqate 2000's / early 2010's, that are now almost vintage devices. Therefore the overall audiovisual style of the page resembles the vintage design trends of the time (colours, black outlines, rounded corners, thick typeface, bubbly graphics, pixel art), as shown here: 
-- https://www.envato.com/blog/y2k-aesthetic/#:~:text=What%20Is%20the%20Y2K%20Aesthetic,as%20the%20eye%20could%20see.  
-- https://dribbble.com/stories/2022/06/02/y2k-design-trends 
-In line with these design trends, I also customised the pointer(cursor) to be the icon of a pixel. 
-The devices shown in the page are: a Game Boy Advance (on the let), an mp3 media player (at the center of the composition), a qtek 9100 phone (on the right)
+- My aim is to create an audiovisual experience to provide complete audiovisual feedback the users' actions, when they trigger the specific interactive elements set on the page. The page has plain 2D images in the foreground and background, to create  a sense of field depth. The art style I took as inspiration is abstract ar, in particular Wassily Kandisky's paintings, which convey a sense of unconventional freedom and open up spaces and possibilities. (https://www.bbc.co.uk/bitesize/topics/zwg9qyc/articles/zr7cdnb  )
+- Users can interact with these elements, by simply clicking, dragging, and double cliccking on them, to receive different kinds of feedback in responsse to that specific action. 
+
 -->
 
     
 <body>
 
-    <!-- container: 2D background image ann interactive items-->
-    <img id="backgroundimg" class="backgroundimg" src="img/loading-background.png" alt="background image showing sketches of an old gameboy console, an mp3 media player and and old mobile phone.">
 
-    <h1>Interactive Experiment</h1>
-    <a href="interwoven-feedback.html" style="text-decoration: none;"><h3>Click To Start </h3></a>
+  <h1>Interwoven Feedback</h1>
+  <img id="backgroundimg" class="backgroundimg" src="img/kandisky-doodles.png" alt="background image showing sketches of an old gameboy console, an mp3 media player and and old mobile phone.">
+    
+  <button class="button1"><a style="text-decoration: none; color: #E100ED;" href="interwoven-feedback.html">Click to Start</a></button>
 
-    <!-- mute/unmute button function - to mute or unmute the electronic background music loop playing automatically when loading the homepage -->
-    <button style="border: #dfff2a;"><img src="img/music.png" alt="icon of mute/unmute button"></button>
+  <p>Audio on for a better experience</p>
+
+
+
+
+
+<!-- Part of the assignment requires me to write a 500 word written document to introduce, explain and justify the content of this project. Instead of including the 500 words in the page like an actual text format, I decided to divide the content into popus, in numbered order. Each popup follows the other one, to also suggest to users the best order in whihc they can interact with the page. -->
+<!-- Pop up 1  -->
+<div id="box1" class="popup" onclick="popUp1()" style="margin-left: 30px; bottom: 490px;">1
+  <span class="popuptext" id="myPopup" style="width: 300px;">This experimental diorama project, including visual elements and sounds, are inspired by Vassily Kandisky abstract studies.</span>
+</div>
+
+<!-- Pop up 2 -->
+<div id="box1" class="popup" onclick="popUp2()" style="margin-left: 780px; bottom: 100px;">2
+    <span class="popuptext" id="popUp2" style="width: 350px;">To start, move to the interactive menu on the left of this pop up and press the start button.</span>
+  </div>
+
+
+
+  
+
+<!-- popup function script-->
+<script>
+function popUp1() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+
+function popUp2(){
+var popup = document.getElementById("popUp2");
+popup.classList.toggle("show");
+}
+</script>
+
+
 
 
 
