@@ -35,7 +35,52 @@ The devices shown in the page are: a Game Boy Advance (on the let), an mp3 media
 
     <h1>Interwoven Feedback</h1>
 
-<!-- Code a mockup of a Gameboy advance style videogame that users can interact with??????? -->
+
+
+<!--  500 words written reflection on the webpage prototype, adjective/design pair and interaction. 
+  These refletcions are included in the page in the form of a short essay. By clicking on the "text" icon on the top right corner of the page, you can open a sort of slide-in, curtain menu  overlay that contains the essay. I decided to include this overlay effect, so that users can read through the essay only if thye are intrested. The main focus still remains the audiovisual composition. This way, when users click on the icon and open the essay, it's easy to scroll and read through the paragraphs and focus entirely on the written presentation. On the other side, if users want to focus on the composition, the essay is hidden and therefore they won't have any additional information overcrowding the web page. -->
+
+<!-- curtain menu overlay-->
+<!-- function and icon that allows users to open the overlay -->
+<span style="font-size:30px;cursor:pointer"  onclick="openNav()"><img class="icon" src="img/font-size.png" style="margin-left: 1200px; margin-top: -30px; border: solid 2px var(--col01); width: fit-content; box-shadow: 5px 5px 5px;" width="35" height="35"></span>
+
+<!-- overlay content -->
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebutton" onclick="closeNav()">&times;</a>
+  <div class="overlay-content"><p>For this assignment, my original idea was to create a  prototype that features an  interactive audiovisual composition with 2.5D low-fi design interface and spatial digital sound. The aim was to make a webpage prototype that could digitally reproduce real spatial audio, to create a better sound experience on the web. Users could  pick one of the tracks from the mp3 media player, then play it live through a set of different outputs (either headphones or speakers) represented on the page. Users could play music from either 1 speaker, a combination of speakers, or through the headphones. 
+    However, when coding in javascript, I found some major technical difficulties. In order to edit the tracks live in Visual Studio Code, I would have to code function and arrays to add sound effects suitable to type of output and its position). I would also need to code arrays  to allow users to switch between these devices, and switch between different tracks.  Unfortunately, when rendering the code on the browser, it was hard to get the audio source connected to a speaker, and then pause the audio when switching to another output device. At last, even if eventually I could get the code rendering properly on the website, I would have had a nice audio feedback experience, whereas the visuals would be left a bit behind. The only visuals I could include in the page were simple sketches and representations of speakers, a small mp3 media player and headphones. The only feedback these visuals could realistically provide, was the audio feedback (soundtracks playing). This was not in line with my chosen pair, interwoven feedback, in which visual and audio feedback would interweave together for a better browser-based experience.  However, as I really wanted to include audio elements in my project, I decided to go for something that would still provide audiovisual interwoven feedback, but could be more feasible and appropriate to the context. 
+    I redesigned the project to have better audiovisual interactions that could better work together. Also, instead of having to code audio live in VS Code, I pre-edited the tracks separately in Reaper DAW adding the necessary effects to make the audio sound realistic. Each visual element on the page has one audio track that plays when users hover or click on that element. The visual composition and layout is inspired by Wassily Kandinsky’s abstract art studies. Users will first load a homepage, from which they can access the interactive environment. 
+    talk specifically about choices you made in relation to your interaction design and how they were influenced by your chosen adjective/principle pairing.
+    Technical Process: 
+    All sounds are copyright free and have also been edited in Reaper Daw, to make them sound realistic and diegetic, in relation to position, size and material of the visual object producing that sound.  In order to fake how spatial audio sounds like, and to deliver a better user experience and feedback, I added some post-production sound  effects like reverb, panning, gain and volume. This mimics the spatiality of sound in a real 3D environment, while rendering on the web an audio format that most users can have access to and easily load on their browsers. 
+    Interactive audio assets of the page include: 
+    •	Earcons and hard effects that mimic real materials, like glass and plastic, movement sounds (like rolling and bouncing). 
+    Visual assets include:
+    •	2.5D flat design, vector graphics inspired by Wassily Kandisky abstract art studies. These shapes are in fact 2D geometrical shapes, however I have added box-shadows, thick borders and rotations  to make  them look more realistic and add perception of depth. 
+    
+    </p></div>
+
+</div>
+
+<!-- js functionssss -->
+<script>
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+</script>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -75,17 +120,11 @@ The devices shown in the page are: a Game Boy Advance (on the let), an mp3 media
 
 
 
-
-
-
-
-
-
-<!-- include 1st pop up here -->
+<!-- All Pop ups -->
 
 <!-- Pop up 1  -->
 <div id="popup-box" class="popup" onclick="popUp1()" style="margin-left: 0px; bottom: 40px;">1
-    <span class="popuptext" id="popup1" style="width: 300px;">All the visual elements in this page are interactive. You can interact with the visual elements in the page to experience an immersive audiovisual feedback. Hover and click on each one of them to in whichever order you prefer, to enjoy the interwoven audiovisual feedback.</span>
+    <span class="popuptext" id="popup1" style="width: 300px;">All the visual elements in this page are interactive. You can interact with each one of the to experience an  audiovisual feedback. Hover and click on each one of them to in whichever order you prefer, to enjoy the interwoven audiovisual feedback.</span>
   </div>
   
   
@@ -98,13 +137,12 @@ The devices shown in the page are: a Game Boy Advance (on the let), an mp3 media
   
 
     <!-- Pop up 3 -->
-  <div id="popup-box" class="popup" onclick="popUp3()" style="margin-left: 510px; top: 50px;">3
-    <span class="popuptext" id="popUp3" style="width: 350px;">Hover on the coloured circles, squares and triangles, listen to the sound effects they produce, and guess what materials they resemble the most!</span>
+  <div id="popup-box" class="popup" onclick="popUp3()" style="margin-left: 510px; top: 150px;">3
+    <span class="popuptext" id="popUp3" style="width: 350px; margin-top: 70px; margin-left: -520%;">Hover on the coloured circles, squares and triangles, listen to the sound effects they produce, and guess what materials they resemble the most!</span>
   </div>
 
 
 
-  
     
   
   <!-- popup function script-->

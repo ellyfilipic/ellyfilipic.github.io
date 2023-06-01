@@ -30,6 +30,7 @@ html{
     text-decoration: underline;
     }
     
+
  
     .container {
       display: flex;
@@ -287,12 +288,14 @@ transform: rotate(-15deg);
 #popup-box:hover{
     background: var(--col03);
     color: var(--col02);
+    box-shadow: var(--col01) 5px 5px 5px;
 }
 
 
   /*  popup content */
   .popup .popuptext {
     visibility: hidden;
+    width: 120px;
     height: fit-content;
     background-color: var(--col02);
     color: var(--col01);
@@ -304,6 +307,7 @@ transform: rotate(-15deg);
     position: absolute;
     z-index: 5;
     margin: 50%;
+  
   }
 
 
@@ -313,3 +317,66 @@ transform: rotate(-15deg);
   }
   
 
+
+
+
+  /* overlay effect */
+ 
+  .overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    background-color: var(--col01);
+    opacity: 90%;
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    z-index: 5;
+    position: relative;
+    width: 90%;
+    text-align: center;
+    padding-left: 10%;
+    margin-top: 80px;
+  }
+
+  p{
+    font-family: 'Pangolin';
+    font-size: 18px;
+    text-align: left;
+    color: var(--col02);
+
+  }
+
+.p1{
+    font-family: 'Pangolin';
+    font-size: 18px;
+    text-align: right;
+    color: var(--col02);
+}
+  .overlay .closebutton {
+    z-index: 5;
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: var(--col02);
+  }
+  
+  .closebutton:hover{
+color: var(--col03);
+  }
+
+  @media screen and (max-height: 450px) {
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
