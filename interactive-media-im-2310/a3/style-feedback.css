@@ -50,7 +50,10 @@ position: absolute;
 margin-top: 35%;
 }
 
-
+/* I am recreating shapes from the kandisky's painting, however, I am adding some personal taste to the composition as well
+. The black and blue circles remind me of the diaphragm of loudspeakers. This is a good affordance that can provide 
+feedback: visual feedback, as the circle vibrates to imitate the vibration of loudspeakers; audio feedback, by playing an 
+audio track. Each circle plays a different audio when users hover over the different circles.  */
 #box1{
     display: grid;
     position: absolute; 
@@ -62,6 +65,9 @@ margin-top: 35%;
     height: 70px;
     margin-top: 70px;
     margin-left: 70px;
+}
+#box1:hover{
+  animation: vibrate 0.3s linear infinite both;
 }
 
 #box2{
@@ -76,7 +82,9 @@ margin-top: 35%;
     margin-top: 50px;
     margin-left: 50px;
 }
-
+#box2:hover{
+  animation: vibrate 0.3s linear infinite both;
+}
 
 #box3{
     display: grid;
@@ -90,10 +98,12 @@ margin-top: 35%;
     margin-top: 8px;
     margin-left: 8px;
 }
+#box3:hover{
+  animation: vibrate 0.3s linear infinite both;
+}
 
 
-
-/* large black circle below every other circle */
+/* large black circle below every other circle. I added no amination to this large circles, to keep it still and use it as a frame for the other shapes it contains.  */
 #box4{
 display: grid;
 position: absolute; 
@@ -135,18 +145,22 @@ transform: rotate(-15deg);
     }
     
 
-/* spheres rolling down */
+/* circles rolling down */
+/* as this small circle is closer to the left side of the page, I am letting roll out to the left, on mouse hover */
 #box7{
     display: grid;
     position: absolute; 
     z-index: 1;
     background-color: var(--col02);
-    border: solid 8px var(--col03);
-    border-radius: 100px;
+    border: solid 5px var(--col03);
+    border-radius: 20px;
     width: 75px;
     height: 75px;
     margin-top: 240px;
     margin-left: 447px;
+}
+#box7:hover{
+  animation: roll-bottom 2s ease-in both;
 }
 
 #box8{
@@ -154,26 +168,31 @@ transform: rotate(-15deg);
     position: absolute; 
     z-index: auto;
     background-color: var(--col02);
-    border: solid 8px var(--col01);
-    border-radius: 100px;
+    border: solid 5px var(--col01);
+    border-radius: 20px;
     width: 75px;
     height: 75px;
     margin-top: 265px;
     margin-left: 367px;
 }
-
+#box9:hover{
+  animation: roll-top 2s ease-in both;
+}
 
 #box9{
     display: grid;
     position: absolute; 
     z-index: auto;
     background-color: var(--col02);
-    border: solid 8px var(--col06);
-    border-radius: 100px;
+    border: solid 5px var(--col06);
+    border-radius: 20px;
     width: 75px;
     height: 75px;
     margin-top: 295px;
     margin-left: 285px;
+}
+#box9:hover{
+  animation: roll-left 2.3s ease-in both;
 }
 
 /* small bouncing ball */
@@ -189,9 +208,15 @@ transform: rotate(-15deg);
     margin-top: 85px;
     margin-left: 550px;
 }
+#box10:hover{
+            animation: bounce 2s both;
+}
 
 
-/* glass traingles */
+/* glass traingles. 
+In the original painting, these 2 triangles and the circle are semi-transparent and appear to be of a shiny material. 
+In this project, I made them sound as if they are made of glass, so whenever users hover on them, they hear high-pitched 
+noises that glass objects would normally make. */
 #box11{
     z-index: 1;
     width: 0; 
@@ -203,6 +228,11 @@ transform: rotate(-15deg);
     transform: rotate(190deg);
     margin-top: 130px;
     margin-left: 680px;
+}
+#box11:hover{
+  -webkit-animation: glass-shake 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  animation: glass-shake 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  transform: rotate(190deg);
 }
 
 #box12{
@@ -217,6 +247,11 @@ transform: rotate(-15deg);
     margin-top: 48px;
     margin-left: -170px;
 }
+#box12:hover{
+  -webkit-animation: glass-shake 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  animation: glass-shake 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  transform: rotate(190deg);
+}
 
 #box13{
     display: grid;
@@ -230,6 +265,11 @@ transform: rotate(-15deg);
     height: 175px;
     margin-top: 25px;
     margin-left: 750px;
+}
+#box13:hover{
+  -webkit-animation: glass-shake 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  animation: glass-shake 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  transform: rotate(190deg);
 }
 
 
@@ -260,7 +300,14 @@ transform: rotate(-15deg);
     margin-top: 300px;
     margin-left: 900px;
 }
-
+.box15:hover{
+  background-color: var(--col06);
+  border: solid 5px var(--col04);
+  width: 135px;
+  height: 135px;
+  margin-top: 300px;
+  margin-left: 900px;
+}
 
 
 
@@ -371,6 +418,11 @@ transform: rotate(-15deg);
 color: var(--col03);
   }
 
+
+
+
+
+
   @media screen and (max-height: 450px) {
     .overlay {overflow-y: auto;}
     .overlay a {font-size: 20px}
@@ -380,3 +432,137 @@ color: var(--col03);
     right: 35px;
     }
   }
+
+
+
+  @keyframes vibrate {
+    0%{
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      transform: translate(2px, 2px);
+    }
+    80% {
+      transform: translate(2px, -2px);
+    }
+    100%{
+      transform: translate(0);
+    }
+  }
+
+
+  @keyframes bounce {
+      0% {
+                transform: translateX(0);
+                animation-timing-function: ease-out;
+      }
+      15% {
+                transform: translateX(-10);
+                animation-timing-function: ease-out;
+      }
+      25% {
+                transform: translateX(-38px);
+                animation-timing-function: ease-in;
+      }
+      38% {
+                transform: translateX(0);
+                animation-timing-function: ease-out;
+      }
+      52% {
+                transform: translateX(-80px);
+                animation-timing-function: ease-in;
+      }
+      70% {
+                transform: translateX(0);
+                animation-timing-function: ease-out;
+      }
+      85% {
+        opacity: 1;
+      }
+      100% {
+                transform: translateX(-1000px);
+        opacity: 0;
+      }
+    }
+    
+
+/* glass-shake */
+
+@keyframes glass-shake {
+  0%,
+  100% {
+            transform: translateX(0);
+  }
+  10%,
+  30%{
+    transform: translateX(-10px);
+    transform: translateX(-50px); /* rolling glass sphere??????????? */
+  }
+  50%,
+  70% {
+            transform: translateX(-10px);
+
+  }
+  20%,
+  40%,
+  60% {
+            transform: translateX(10px);
+  }
+  80% {
+            transform: translateX(8px);
+  }
+  90% {
+            transform: translateX(-8px);
+  }
+}
+
+
+
+/* roll-left animation */
+
+@keyframes roll-left {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-1000px) rotate(-540deg);
+    opacity: 0;
+  }
+}
+
+/* roll-out to the bottom of the page - circle with pink rounded corners  */
+
+@keyframes roll-bottom {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(800px) rotate(540deg);
+    opacity: 0;
+  }
+}
+
+/* roll out to the top of the page - circle with black rounded  border */
+
+@keyframes roll-top {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-800px) rotate(-540deg);
+    opacity: 0;
+  }
+}
+
+
+
+

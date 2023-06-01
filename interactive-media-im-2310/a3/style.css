@@ -133,3 +133,10 @@ p{
   }
   
 
+.p1{
+    font-family: 'Pangolin';
+    font-size: 22px;
+    color: var(--col01);
+    text-align: center;
+    padding: 10px;
+}

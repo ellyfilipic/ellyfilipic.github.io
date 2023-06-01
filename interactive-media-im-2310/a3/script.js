@@ -1,9 +1,20 @@
 
+/* The code below was written for the first prototype of spatial sound, trying to connect audio tracks together, 
+switch between inputs and outputs, loop music tracks and play/pause/disable audio. However, as the prototype has been 
+changed and I do not require to code audio tracks live anymore, I commented out the lines of code below, so it won't 
+affect the other html and ccs document pages. */
+
+
+
+
+
+
+
 
 
 /* Audio effects such as reverb, volume, gaina nd so on will be added to further stylize and edit each audio track.  */
 
-
+/* 
 // audio context, get source connect to audio content and final destination
 
 const audioCtx = new AudioContext (); 
@@ -70,7 +81,7 @@ buttons.forEach(button => {
 
  */
 
-
+/* 
  function Play()
       {
         var myAudio = document.getElementById("track1");
@@ -86,4 +97,4 @@ buttons.forEach(button => {
 function pauseMusic()
     {
       
-    }
+    }  */
