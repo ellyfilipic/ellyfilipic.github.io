@@ -21,14 +21,48 @@
 
 
 <title>A3 - Interwoven Feedback</title>
-<!-- I HAVE INCLUDED BELOW THE MAIN COMMENTS OUTLINING THIS PROJECT. However, more specific comments explaining each specific interaction, element or component of the page, are added next to the related chunk of code, in each code document -->
+<!-- I HAVE INCLUDED BELOW THE MAIN COMMENTS OUTLINING THIS PROJECT. 
+  However, more specific comments explaining each specific interaction, element or component of the page, are added next 
+  to the related chunk of code, in each code document -->
 
-<!-- I chose 2 principles to creare this project, from the list provided on canvas: Feedback (as a design principle) and Interwoven (as an adjective). I am using these two principles to create an interactive, audiovisual vintage experience. Therefore 'Interwoven Feedback' is the name I chose for this page. Therefore my research quesiton and starting point for this final experiment, is to further investigate how can audio help, enhance, narrate and contextualise web-based experiences for a more interactive and immersive feedback. 
-- With this project, I am trying to better study and understand the roles, possibilities and opportunities that music (and audio more broadily) can play iin an interactive web-based media project. THere are not many examples of music played online, especially in websites, as music in this case is considered to be too distracting from the visual content (which happens to be the main focus of every website). 
-- My aim is to create an audiovisual experience to provide complete audiovisual feedback the users' actions, when they trigger the specific interactive elements set on the page. The page has plain 2D images in the foreground and background, to create  a sense of field depth. The art style I took as inspiration is abstract ar, in particular Wassily Kandisky's paintings, which convey a sense of unconventional freedom and open up spaces and possibilities. (https://www.bbc.co.uk/bitesize/topics/zwg9qyc/articles/zr7cdnb  )
-- Users can interact with these elements, by simply clicking, dragging, and double cliccking on them, to receive different kinds of feedback in responsse to that specific action. 
 
--->
+<!-- I chose 2 principles to create this project, from the list provided on canvas: Feedback (as a design principle) and 
+  Interwoven (as an adjective). In relation to this chosen pair, the concept behind the project is to create an 
+  audiovisual experience, where audio and visual elemetns interweave and interact together in the composition to create 
+  better audivvisual feedback in response to the users' interactions with the page itself. 
+- My research quesiton and starting point for this final experiment, is to further investigate how can audio help, 
+  enhance, narrate and contextualise web-based experiences for a more interactive feedback. 
+- With this project, I am trying to better understand the roles, possibilities and opportunities that music (and
+ audio more broadily) can play in an interactive web-based media project. There are not many examples of music played 
+ on online website, as music is often considered to be too distracting from the visual content (which 
+ happens to be the main focus of every website). 
+- My aim is to create an audiovisual experience to provide complete audiovisual feedback to the users' actions, when they 
+trigger the specific interactive elements set on the page. The page contains flat-design 2.5D images (mainly css boxes) 
+positioned in different parts of the page and in relation to each other.
+- The art style I took as inspiration is abstract ar, in particular Wassily Kandisky's paintings, which have a sense 
+of unconventional freedom in the composition and open up spaces and possibilities. (https://www.bbc.co.uk/bitesize/topics/zwg9qyc/articles/zr7cdnb  )
+- Users can interact with these elements, by simply hovering on them to receive different kinds of feedback in 
+responsse to that specific action. Visual feedback includes: rotation, roll-out, vibration effect; audio feedback includes
+ playing audio tracks on hover. Each audio track is chosen and edited to make it more appropriate to the context and to 
+ the specifici visual shape that is triggering that audio to play. All sounds are copyright free and I then edited them 
+ in Reaper as well. 
+- Kandisky's made a series of abstract art studies, from which I am taking inspiration to create this webpage. Each of 
+these studies include a wide range of visuals, including shapes, 3D forms, lines, dots and many different colours. I 
+included in this page only those visual elements I believe can convey a more meaningful and interesting audiovisual 
+feedback (in pafticular triangle,s squares and rectangles).
+- As mentioned in the 500 words below as well, my initial idea was a bit different. The idea was to create a digital 
+spatial sound set, that could mimic real spatial audio. Users could experience spatial audio by playing music from 
+different devices rrepresented on the screen (including speakers and headphones). Hoever, this included many js functions 
+and arrays that require advanced live audio coding beyond my js coding skills. As I went on coding, there were also major 
+difficulties in rendering the audio on the web, playing and pausing the audio, switching between tracks and speakers. I 
+commented out all the js code in the "script.js" document so that it won't affect the new project, however I left it 
+there as a reference to show my initial attempts to code and edit audio without using any external DAW software. 
+Moreover, this project had also another issue: it was not totally in line with my chosen pair. Even though there was a 
+strong, valuable audio feedback users could receive from the page, the visual feedback was very limited, as the visuals 
+included in the page were few, low-fi, and could not provide enough feedback. 
+- Trying to fix and debug the issues stated above required a lot of effort and took a lot of time as well. Because the 
+deadline for this assignment ws coming closer, I decided to create something more feasible, so I opted for this new, 
+different approach as shown in the code below. -->
 
     
 <body>
@@ -45,7 +79,10 @@
 
 
 
-<!-- Part of the assignment requires me to write a 500 word written document to introduce, explain and justify the content of this project. Instead of including the 500 words in the page like an actual text format, I decided to divide the content into popus, in numbered order. Each popup follows the other one, to also suggest to users the best order in whihc they can interact with the page. -->
+
+<!-- In both the home/landing page and the actual interactive composition, I also included some numebred pop-ups that 
+  suggest to users the best way to interact with the composition, as well as further explaining its content. However, 
+  users are free to interact with the page ina way that can be meaningful to them. -->
 <!-- Pop up 1  -->
 <div id="popup-box" class="popup" onclick="popUp1()" style="margin-left: 30px; bottom: 490px;">1
   <span class="popuptext" id="myPopup" style="width: 300px;">This experimental diorama project, including visual elements and sounds, are inspired by Vassily Kandisky abstract studies.</span>
@@ -76,9 +113,14 @@ popup.classList.toggle("show");
 
 
 
-
+<!-- Part of the assignment requires me to write a 500 word written document to introduce, explain and justify the 
+  content of this project. I found myself having to explain and justify many conceptual and technical choices I made, 
+  with regards to both the first and second project idea, visual and audio choices as well. THerefore I divided the 
+  content and written relfections in 2 main sections. The first is shown as a simple paragraph, below. The second is 
+  shown in the actual interactive composition, and explains in more detail the interaction and tetchnical choices I made 
+  in order to better design the composition itself. -->
 <p1>For this assignment, my initial idea was to create a  prototype that features an  interactive audiovisual composition with low-fi design interface and spatial digital sound. The aim was to make a webpage prototype that could digitally reproduce real spatial audio, to create a better sound experience on the web. Users could  pick one of the tracks from the mp3 media player, then play it live through a set of different devices (either headphones or speakers) represented on the page. Users could play music from either 1 speaker, a combination of speakers, or through the headphones. 
-  However, when coding in javascript, I found some major difficulties. In order to edit the tracks live in Visual Studio Code, I would have to code complex functions, variables and statements to add sound effects suitable to the type of device and its position on the page). I would also need to code arrays to allow users to switch between these devices, to play the audio tracks from different outputs on the page, and experience spatial sounds.   Moreover, when rendering the code on the browser, it was hard to get the audio source connected to a speaker, and then pause the audio when switching to another output device. At last, even if eventually I could get the code rendering properly on the website, I would have had a nice audio feedback experience, whereas the visuals would be left a bit behind. This is because the only visuals I could include in the page were simple sketches and representations of speakers, a small mp3 media player and headphones. The only feedback these visuals could realistically provide, was the audio feedback (soundtracks playing). This was not in line with my chosen pair, interwoven feedback, in which visual and audio feedback would interweave together for a better browser-based experience and better audiovisual feedback.  
+  However, when coding in javascript, I found some major difficulties. In order to edit the tracks live in Visual Studio Code, I would have to code complex functions, variables and statements to add sound effects suitable to the type of device and its position on the page. I would also need to code arrays to allow users to switch between these devices, to play the audio tracks from different outputs on the page, and experience spatial sounds.   Moreover, when rendering the code on the browser, it was hard to get the audio source connected to a speaker, and then pause the audio when switching to another output device. At last, even if eventually I could get the code rendering properly on the website, I would have had a nice audio feedback experience, whereas the visuals would be left a bit behind. This is because the only visuals I could include in the page were simple sketches and representations of speakers, a small mp3 media player and headphones. The only feedback these visuals could realistically provide, was the audio feedback (soundtracks playing). This was not in line with my chosen pair, interwoven feedback, in which visual and audio feedback would interweave together for a better browser-based experience and better audiovisual feedback.  
   I therefore decided to slightly change the prototype to better reflect my chosen pair. As  I really wanted to include audio elements in my project, I decided to go for something that would still provide audiovisual interwoven feedback, but could be more feasible and appropriate to the context. 
   I redesigned the project to have better audiovisual interactions that could better work together as well. Therefore instead of representing a simple spatial audio set system, I represented an abstract environment, in which elements would still be placed in different positions on the page and on different layers, so they could provide a sense of spatiality, while having the opportunity to play with the visuals as well and interweave the audio feedback with meaningful visual interactions. 
   Also, instead of having to code audio live in VS Code, in this case I pre-edited the tracks in Reaper DAW adding the necessary effects to make the audio sound realistic. Click “Start” to check out the interactions. 

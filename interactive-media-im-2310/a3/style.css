@@ -1,5 +1,13 @@
 
-/* I wanteed the overall home/loading page to feel like the interface of a Nintendo videogame homescreen, a kind of cartoonish style very popular in the late 2000s. Therefore the UI looks colourful, cartoonish, images have rounded corners, coloured and solid borderd and defined lines. */
+/* this interactive composition is inspired by Wassily Kandisky abstract art studies. I chose his artworks as a style 
+and aesthetic reference, because I really appreciate how they open up to new worlds and possibilities. They are a great 
+source of inspiration to create interactive audovisual compositions, as they have many affordances that I can animate and 
+atrtibute sound to. Kandisky himself chose to use abstact geometrical shapes and lines to convey messages of human ideas,
+emotions and reactions, as a means of universal language that goes beyond cultural boundaries. 
+As this reference style is very abstract, I could recreate these shapes giving them new animations, sound, colours and 
+movement to create a playful composition. 
+https://www.theartstory.org/artist/kandinsky-wassily/#:~:text=He%20sought%20to%20convey%20profound,transcended%20cultural%20and%20physical%20boundaries. 
+*/
 
 html{
     background-color: var(--col05);    
@@ -15,13 +23,8 @@ html{
     body {
         cursor: url(‘img/love-pixels.png’), auto;
   }
-
-
-
-    /* This colour palette contains the same shades of colours I used in Adobe Illustrator to create the main visual assets. All colours are inspired by real devices I use to play with in my childhood ^^ 
-    Together with the background music, the style of the buttons and the logo, the aesthetics of the homepage allow users to be immersed in the cartoonish and gaming-like vibe of the page from the very start. Overall, I tried my best to design the Ui of this page to look like a vintage videogame menu/settings page. 
-*/
-    
+/* The colour palette is inspired by Kandisky art works, however is customised to better adapt to a web-browsed interface,
+ ensure legibility and good contrast on the screen. */ 
     :root{
         --col01: #080808;
         --col02: #F8F7F9;
@@ -30,15 +33,14 @@ html{
         --col05: #dfff2a;
     }
  
-
+ /* The 2 font families I chose are Pacifico (for main headings) and Pangolin for text and paragraphs, as it is more legible. 
+ Both these font families look informal and playful, so I believe they suit well the abstract and colourful composition.*/
     h1{
         font-family: 'Pacifico', cursive;
         text-align: center;
         color: var(--col03);
         text-decoration: none;
     }
-
-
 p{
     font-family: 'Pangolin', cursive;
     font-style: italic;
@@ -47,8 +49,7 @@ p{
     text-align: center;
 }
 
-/* I wanted to style this button to make it look more like a videogame menu button: wide, low value for the height so thta it appears long and thin; coloured and orunded border; vibrant colours; bright colour on hover, to make contrast with the white text. Reference and inspiration: https://www.dreamstime.com/collection-vector-buttons-mobile-games-image185347689  */
-    .button1{
+   .button1{
         font-family: 'Pangolin', cursive;
         font-size: 14px;
         text-align: center;
@@ -76,7 +77,7 @@ p{
         margin-top: 2%;
     }
 
-/* fade out background animation */
+/* This is the image of Kandisky's artwork I chose as a main reference for my composition.*/
     .backgroundimg {
     display: flex;
     margin-left: 33%;

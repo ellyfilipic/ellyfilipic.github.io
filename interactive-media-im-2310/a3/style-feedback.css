@@ -1,17 +1,19 @@
 html{
-    background-color: var(--col05);    
-    }
+  background-color: var(--col05);    
+}
     
-    *{
-        box-sizing: border-box;
-        margin: 0;
-        /* cursor: ; */
-    }
+*{
+  box-sizing: border-box;
+  margin: 0;
+  cursor: url('img/puzzle.png') auto;
+  }
+/* this was an attempt to style the cursor of the page with a custom icon instead of the auto css cursor. 
+However, as the image was not showing up on the web, I rpelaced it with a simple auto and pointer (when on hover)*/
+.body{
+  cursor: url('img/puzzle.png') auto;
+}
 
 
-
-
-    /* This colour palette contains the same shades of colours I used in Adobe Illustrator to create the main visual assets. All colours are inspired by real devices I use to play with in my childhood ^^ */
     :root{
         --col01: #080808;
         --col02: #F8F7F9;
@@ -21,27 +23,28 @@ html{
         --col06: #5db1ff; 
     }
     
-    h1{
-    color: var(--col04);
-    font-family: 'Pacifico', cursive; /* I chose this particular font family because it really resembles a vintage style font and I believe it really suits the context and aesthetics of the page. */
-    font-weight: normal; 
-    font-size: 40px;
-    text-align: center;
-    text-decoration: underline;
-    }
+h1{
+  color: var(--col04);
+  font-family: 'Pacifico', cursive;
+  font-weight: normal; 
+  font-size: 40px;
+  text-align: center;
+  text-decoration: underline;
+}
     
 
  
-    .container {
-      display: flex;
-      position: relative;
-      width: 50%;
-      max-width: 300px;
-      margin-left: 6%;
-    }
+.container {
+  display: flex;
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+  margin-left: 6%;
+}
 
     
-/* most of the visual elements shown in the painting are squares and circles, so I am reproducing them through css boxes, adapting their properties to make them look closer to the original painting.  */
+/* most of the visual elements shown in the painting are squares and circles, so I am creating these shapes on this page
+ using css boxes, adapting their properties to make them look closer to the original painting.*/
 
 .black-blue-circles{
 display: grid;
@@ -50,10 +53,10 @@ position: absolute;
 margin-top: 35%;
 }
 
-/* I am recreating shapes from the kandisky's painting, however, I am adding some personal taste to the composition as well
-. The black and blue circles remind me of the diaphragm of loudspeakers. This is a good affordance that can provide 
-feedback: visual feedback, as the circle vibrates to imitate the vibration of loudspeakers; audio feedback, by playing an 
-audio track. Each circle plays a different audio when users hover over the different circles.  */
+/* However, instead of just reproducing shapes from the original art work, I am adding some personal taste to the 
+composition as well. The black and blue circles remind me of the diaphragm of loudspeakers. This is a good affordance that
+can provide feedback: visual feedback, as the circle vibrates to imitate the vibration of loudspeakers; audio feedback, 
+by playing an audio track. Each circle plays a different audio when users hover over the different circles.*/
 #box1{
     display: grid;
     position: absolute; 
@@ -67,9 +70,11 @@ audio track. Each circle plays a different audio when users hover over the diffe
     margin-left: 70px;
 }
 #box1:hover{
+  cursor: pointer;
   animation: vibrate 0.3s linear infinite both;
 }
 
+/* second speaker box */
 #box2{
     display: grid;
     position: absolute; 
@@ -83,9 +88,11 @@ audio track. Each circle plays a different audio when users hover over the diffe
     margin-left: 50px;
 }
 #box2:hover{
+  cursor: pointer;
   animation: vibrate 0.3s linear infinite both;
 }
 
+/* third speaker box */
 #box3{
     display: grid;
     position: absolute; 
@@ -99,11 +106,13 @@ audio track. Each circle plays a different audio when users hover over the diffe
     margin-left: 8px;
 }
 #box3:hover{
+  cursor: pointer;
   animation: vibrate 0.3s linear infinite both;
 }
 
 
-/* large black circle below every other circle. I added no amination to this large circles, to keep it still and use it as a frame for the other shapes it contains.  */
+/* large black circle below every other circle. I added no amination to this large circles, to keep it still and use it 
+as a frame for the other shapes it contains.  */
 #box4{
 display: grid;
 position: absolute; 
@@ -117,7 +126,6 @@ border-radius: 120px;
 
 
 /* 2 black, thin rectangles */
-
 #box5{
 display: grid;
 position: absolute; 
@@ -160,6 +168,7 @@ transform: rotate(-15deg);
     margin-left: 447px;
 }
 #box7:hover{
+  cursor: pointer;
   animation: roll-bottom 2s ease-in both;
 }
 
@@ -175,7 +184,8 @@ transform: rotate(-15deg);
     margin-top: 265px;
     margin-left: 367px;
 }
-#box9:hover{
+#box8:hover{
+  cursor: pointer;
   animation: roll-top 2s ease-in both;
 }
 
@@ -192,6 +202,7 @@ transform: rotate(-15deg);
     margin-left: 285px;
 }
 #box9:hover{
+  cursor: pointer;
   animation: roll-left 2.3s ease-in both;
 }
 
@@ -209,14 +220,15 @@ transform: rotate(-15deg);
     margin-left: 550px;
 }
 #box10:hover{
-            animation: bounce 2s both;
+  cursor: pointer;
+  animation: bounce 2s both;
 }
 
 
-/* glass traingles. 
-In the original painting, these 2 triangles and the circle are semi-transparent and appear to be of a shiny material. 
-In this project, I made them sound as if they are made of glass, so whenever users hover on them, they hear high-pitched 
-noises that glass objects would normally make. */
+/* glass shapes. 
+In the original painting, these shapes are semi-transparent and appear to be of a shiny material. 
+In this project, I made them look as sound as if they are made of glass, so they have a lower opacity and whenever users 
+hover over them, they hear high-pitched noises that glass objects would normally make. */
 #box11{
     z-index: 1;
     width: 0; 
@@ -230,28 +242,12 @@ noises that glass objects would normally make. */
     margin-left: 680px;
 }
 #box11:hover{
+  cursor: pointer;
   -webkit-animation: glass-shake 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
   animation: glass-shake 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
   transform: rotate(190deg);
 }
 
-#box12{
-    z-index: 1;
-    width: 0; 
-    height: 0; 
-    opacity: 40%;
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
-    border-bottom: 80px solid var(--col04);
-    transform: rotate(10deg);
-    margin-top: 48px;
-    margin-left: -170px;
-}
-#box12:hover{
-  -webkit-animation: glass-shake 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-  animation: glass-shake 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-  transform: rotate(190deg);
-}
 
 #box13{
     display: grid;
@@ -267,13 +263,13 @@ noises that glass objects would normally make. */
     margin-left: 750px;
 }
 #box13:hover{
-  -webkit-animation: glass-shake 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  cursor: pointer;
   animation: glass-shake 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
   transform: rotate(190deg);
 }
 
 
-/* Coloured rectangle, below glass shapes */
+/* Coloured rectangle, with dashed border - below the glass shapes */
 #box14{
     display: grid;
     position: absolute; 
@@ -288,8 +284,8 @@ noises that glass objects would normally make. */
     }
 
 
-/* first square on the right */
-#box15{
+/* first square on the right, resizes and changes colour on hover */
+#box-a{
     display: grid;
     position: absolute; 
     z-index: 1;
@@ -300,19 +296,18 @@ noises that glass objects would normally make. */
     margin-top: 300px;
     margin-left: 900px;
 }
-.box15:hover{
-  background-color: var(--col06);
-  border: solid 5px var(--col04);
+.box-a:hover{
+  z-index: 1;
+  cursor: pointer;
   width: 135px;
   height: 135px;
-  margin-top: 300px;
-  margin-left: 900px;
+  animation: rotate 3s linear both infinite;
 }
 
 
 
 
-/* pop up styling */
+/* pop ups */
 
 /* pop up number */
 #popup-box{
@@ -330,9 +325,10 @@ noises that glass objects would normally make. */
     font-weight: bolder;
     color: var(--col01);
     cursor: pointer;
-    padding: 0px 20px; /* padding need around the numbers to leave some negative space between the numbers and border.  */
+    padding: 0px 20px; /* padding need around the numbers to leave some negative space between the numbers and border.*/
 }
 #popup-box:hover{
+    cursor: pointer;
     background: var(--col03);
     color: var(--col02);
     box-shadow: var(--col01) 5px 5px 5px;
@@ -367,7 +363,7 @@ noises that glass objects would normally make. */
 
 
 
-  /* overlay effect */
+  /* overlay effect to show 500 words on a different layer*/
  
   .overlay {
     height: 0%;
@@ -377,7 +373,7 @@ noises that glass objects would normally make. */
     top: 0;
     left: 0;
     background-color: var(--col01);
-    opacity: 90%;
+    opacity: 95%;
     overflow-y: hidden;
     transition: 0.5s;
   }
@@ -393,7 +389,7 @@ noises that glass objects would normally make. */
 
   p{
     font-family: 'Pangolin';
-    font-size: 18px;
+    font-size: 20px;
     text-align: left;
     color: var(--col02);
 
@@ -415,14 +411,15 @@ noises that glass objects would normally make. */
   }
   
   .closebutton:hover{
-color: var(--col03);
+  cursor: pointer;
+  color: var(--col03);
   }
 
 
 
 
 
-
+/* keyframes for animations used on the page */
   @media screen and (max-height: 450px) {
     .overlay {overflow-y: auto;}
     .overlay a {font-size: 20px}
@@ -565,4 +562,15 @@ color: var(--col03);
 
 
 
-
+/* roation animation */
+@keyframes rotate{
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

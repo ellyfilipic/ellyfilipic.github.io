@@ -15,12 +15,14 @@
                          
        
 
-    </head>
+      </head>
 
 
-<!-- I chose 2 principles to creare this project, from the list provided on canvas: Feedback (as a design principle) and Interwoven (as an adjective). I am using these two principles to create an interactive, audiovisual vintage experience. Therefore 'Interwoven Feedback' is the name I chose for this page. 
-The aim is to create an audiovisual feedback experience to the users' actions, when they trigger the interactive elements on the page. The page has plain 2D images /sketches in the background, in the style of low-fi, paper mockups and wireframes, to keep the visuals clean and simple and focus more on the audio instead. Each of these 3 main sketches contain other interactive elements (that are shown as being coloured 2.5D items, to catch the viewers' attention.). Users can interact with these elements, by simply clicking, dragging, and double cliccking on them, to receive different kinds of feedback in responsse to that specific action. 
-Interwoven feedback as well because audio and visual elements can be interweave and combine together on the web page to create a cohesive composition, with the aesthetic of abstract art. -->
+<!-- This prototype is called Interwoven feedback because audio and visual elements interweave and combine together on 
+  the web page to create a cohesive, abstract and colourful composition that provides appropriate audiovisual when users 
+  interact with its main interactive elements. 
+I will add more comments next to each code section to better explain the interaction and elements-->
+
 <title>A3 - Interwoven Feedback</title>
 
 
@@ -31,10 +33,15 @@ Interwoven feedback as well because audio and visual elements can be interweave 
 
 
 
-<!--  500 words written reflection on the webpage prototype, adjective/design pair and interaction. 
-  These refletcions are included in the page in the form of a short essay. By clicking on the "text" icon on the top right corner of the page, you can open a sort of slide-in, curtain menu  overlay that contains the essay. I decided to include this overlay effect, so that users can read through the essay only if thye are intrested. The main focus still remains the audiovisual composition. This way, when users click on the icon and open the essay, it's easy to scroll and read through the paragraphs and focus entirely on the written presentation. On the other side, if users want to focus on the composition, the essay is hidden and therefore they won't have any additional information overcrowding the web page. -->
+<!--500 words written reflection on the webpage prototype, adjective/design pair and interaction. 
+  These refletcions are included in the page in the form of a short essay. By clicking on the icon on the top right 
+  corner of the page, users can open a sort of slide-in, curtain menu overlay that contains the essay. I decided to 
+  include this overlay effect, so that users can read through the essay only if thye are intrested. The main focus still 
+  remains the audiovisual composition. This way, when users click on the icon and open the essay, it's easy to read 
+  through the essay and focus entirely on the written presentation. On the other side, if users want to focus on the 
+  composition, the essay is hidden and therefore they won't have any additional information crowding the web page. -->
 
-<!-- curtain menu overlay-->
+<!-- overlay-->
 <!-- function and icon that allows users to open the overlay -->
 <span style="font-size:30px;cursor:pointer"  onclick="openNav()"><img class="icon" src="img/font-size.png" style="margin-left: 1200px; margin-top: -30px; border: solid 2px var(--col01); width: fit-content; box-shadow: 5px 5px 5px;" width="35" height="35"></span>
 
@@ -45,11 +52,11 @@ Interwoven feedback as well because audio and visual elements can be interweave 
     I chose sounds that are copyright free and have also been edited in Reaper Daw, to make them sound realistic and diegetic, in relation to position, size and material of the visual object producing that sound.  In order to fake how spatial audio sounds like, and to deliver a better user experience and feedback, I added some post-production sound  effects like reverb, panning, gain and volume. This mimics the spatiality of sound in a real 3D environment, while rendering on the web an audio format that most users can have access to and easily load on their browsers. Interactive audio assets of the page include: 
     •	Earcons and hard effects that mimic real materials, like glass and plastic, movement sounds (like rolling and bouncing).
     I believe that, compared to the previous one, this audiovisual prototype better reflects the chosen pair. Audio and visuals interweave together in a playful way to convey audiovisual feedback. Compared to my first prototype, this one contains audiovisual interactions that work better together creatively and convey meaningful feedback. 
+    I believe the audio tracks not always play properly when online, so I gues that's a bit of a shame, as my main focus was to provide meaningful audiovisual feedback, so that visuals and audio could interweave and work together to provide a better online experience. 
     </p></div>
-
 </div>
 
-<!-- js functions -->
+<!-- js functions to open and close the overlay-->
 <script>
 function openNav() {
   document.getElementById("myNav").style.height = "100%";
@@ -62,45 +69,167 @@ function closeNav() {
 
 
 
-
-
-
-
-
-
-
-
-
-
+<!-- Interactive elements -->
 
 <!-- container includes all images and interactive elements on the page-->
 <div class="container">
-    <!-- container for black and blue circles -->
+
+    <!-- this is a container for black and blue circles. 
+      As I wanted to add some personal taste to the composition, I shall say that these black circles with coloured 
+      borders remind me of the diaphragm of a loudspeaker. Therefore each circle is considered as a separate, independant 
+      speaker and plays a different audio track on mouse enter/hover. 
+    Each circle overlays the others, to create a sense of depth perception. Therefore, depending on its position and size,
+     the speaker plays a different audio track, as shown below-->
     <div class="black-blue-circles">
-    <div id="box1"></div>
+
+ <!-- first loudspeaker, smallest diaphragm => produces a high-pitched note (small objects are 
+      usually expected to produce high-pitched notes; in this case a violin note) -->
+    <!-- I edited each sound individually in Reaper DAW to add specific sound effects. However, in this case as well, 
+      audio is not rendering properly when loading the page on the web. I tried using various audio formats, including 
+      mp3, wav and ogg as well. -->
+    <div id="box1">
+      <audio> 
+        <source id="highPitchNote" src="audio/high-note-violin.wav" type="wav" onmouseenter="playAudio()"></source>
+      </audio>
+      <script>
+        function playAudio() {
+        var audio1 = document.getElementById("bounceSound");
+          audio1.play();
+        }
+      </script>
+    </div>
+
+<!-- second medium size loudspeaker. These audio tracks associated with each of these circles can be played either 
+  independently or seprately. -->
     <div id="box2"></div>
-    <div id="box3"></div>
-    <!-- large black circle below every other circle-->
+      <audio2> 
+        <source id="pianoNote" src="audio/c-piano-note.wav" type="wav" onmouseenter="playAudio()"></source>
+      </audio2>
+      <script>
+        function playAudio() {
+        var audio2 = document.getElementById("pianoNote");
+          audio2.play();
+        }
+      </script>
+
+<!-- last speaker with white border; large objects are associated with heavy, deep and low-pitched sounds, so I opted 
+  for a heavy electronic synth to be played on hover. -->
+    <div id="box3">
+      <audio> 
+        <source id="synth-note" src="audio/synth-note.wav" type="wav" onmouseenter="playAudio()"></source>
+      </audio>
+      <script>
+        function playAudio() {
+        var audio = document.getElementById("synth-note");
+          audio.play();
+        }
+      </script>
+    </div>
+
+    <!-- large black circle below every other circle. I added no animation nor sound to this circle, as I wanted it to 
+      look more like a sort of frame that contains other circles in the foreground. -->
     <div id="box4"></div>
     
     <!-- 2 black, thin rectangles -->
     <div class="rectangles"></div>
     <div id="box5"></div>
     <div id="box6"></div>
-    <!-- 3 coloured spheres rolling down -->
-        <div id="box7"></div>
-        <div id="box8"></div>
+
+    <!-- 3 coloured spheres rolling out of the page. -->
+        <div id="box7">
+          <audio> 
+            <source id="roll-out" src="audio/roll-out.wav" type="wav" onmouseenter="playAudio()"></source>
+          </audio>
+          <script>
+            function playAudio() {
+            var audio = document.getElementById("roll-out");
+              audio.play();
+            }
+          </script>
+        </div>
+
+        <div id="box8">
+          <audio> 
+            <source id="roll-out" src="audio/roll-out.wav" type="wav" onmouseenter="playAudio()"></source>
+          </audio>
+          <script>
+            function playAudio() {
+            var audio = document.getElementById("roll-out");
+              audio.play();
+            }
+          </script>
+        </div>
+
         <div id="box9"></div>
-    <!-- bouncing ball-->
+        <audio> 
+          <source id="roll-out" src="audio/roll-out.wav" type="wav" onmouseenter="playAudio()"></source>
+        </audio>
+        <script>
+          function playAudio() {
+          var audio = document.getElementById("roll-out");
+            audio.play();
+          }
+        </script>
+
+    <!-- ball bouncing out of the page. Out of all the shapes shown in the original paintings, I only chose those that 
+      could provide effective feedback. Depending on their position in the page and in relation to each other, I applied 
+      sound and animations to make the shapes look interactive. This small coloured ball, for example, is posiitoned high 
+      in the compoisition, and seems to have no close relation with the surrounding elements (in the Kandisky's painting 
+      as well as in this composition). Therefore I "treated" this element separately from the others. It is animated in 
+      order to bounce off, out of the composition and produce a sharp bouncing soud. -->
         <div id="box10"></div>
+          <audio> 
+            <source id="bounceSound" src="audio/bouncsing ball.opus" type="ogg" onmouseenter="playAudio()"></source>
+          </audio>
+          <script>
+            var audio1 = document.getElementById("bounceSound");
+    
+            function playAudio() {
+              audio1.play();
+            }
+          </script>
+     
     <!-- glass shapes-->
-    <div id="box11"></div>
-    <div id="box12"></div>
-    <div id="box13"></div>
+    <div id="box11">
+      <audio> 
+        <source id="glass" src="audio/glass.wav" type="wav" onmouseenter="playAudio()"></source>
+      </audio>
+      <script>
+        function playAudio() {
+        var audio = document.getElementById("glass");
+          audio.play();
+        }
+      </script>
+    </div>
+
+    <div id="box13">
+        <audio> 
+          <source id="glass" src="audio/glass.wav" type="wav" onmouseenter="playAudio()"></source>
+        </audio>
+        <script>
+          function playAudio() {
+          var audio = document.getElementById("glass");
+            audio.play();
+          }
+        </script>
+    </div>
+
     <!-- Coloured rectangle, below glass shapes -->
     <div id="box14"></div>
-    <!-- first rectangle on the right -->
-    <div id="box15"></div>
+    <!-- first rectangle on the right, resizes and rotates on hover -->
+    <div id="box-a">
+      <audio> 
+        <source id="rotate" src="audio/rotate.wav" type="wav" onmouseenter="playAudio()"></source>
+      </audio>
+      <script>
+        function playAudio() {
+        var audio = document.getElementById("rotate");
+          audio.play();
+        }
+      </script>
+    </div>
+
+
 </div>
 
 
@@ -132,7 +261,7 @@ function closeNav() {
 
     
   
-  <!-- popup function script-->
+  <!-- popup functions script-->
   <script>
   function popUp1() {
     var popup = document.getElementById("popup1");

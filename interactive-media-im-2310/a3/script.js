@@ -1,12 +1,9 @@
 
-/* The code below was written for the first prototype of spatial sound, trying to connect audio tracks together, 
+/* The code below was written for the first prototype of digital spatial sound, trying to connect audio tracks together, 
 switch between inputs and outputs, loop music tracks and play/pause/disable audio. However, as the prototype has been 
-changed and I do not require to code audio tracks live anymore, I commented out the lines of code below, so it won't 
-affect the other html and ccs document pages. */
-
-
-
-
+changed and I do not require to code audio tracks live in VS code anymore, I commented out the lines of code below, so it won't 
+affect the other html and ccs document pages. I only left these lines of code as a reference, to show the many attempts I 
+made on trying to edit and play music using js.*/
 
 
 
@@ -37,9 +34,6 @@ let convolver = audioCtx. createConvolver();
 // let response =  await fetch("./exampleGame1.wav");
 // let arraybuffer = await response. arrayBuffer(); 
 // convolver.buffer = await audioCtx. decode  
-
-
-
 
 }
 
