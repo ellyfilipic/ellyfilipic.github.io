@@ -1,0 +1,187 @@
+/*------------Styling information----------------*/
+
+:root{
+    --col01:#0f0e0f;
+    --col02: #c95eff; 
+    --col-03: #2937ff; 
+    --col-04: #fcf6ff;
+    font-family: 'Prata', serif;
+  }
+ 
+
+   @-webkit-keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  
+  
+    /* menu icon */
+    #box1{
+      z-index: auto;
+      display: grid;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: var(--col02);
+      border: none;
+      margin: 2%;
+      animation: scale-up-logo 1.5s;
+    }
+    #box1:hover{
+      display: hidden;
+    }
+  
+  #box2{
+    z-index: 1;
+    display: grid;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px var(--col01);
+    border-style: double;
+    margin: 1%;
+    animation: scale-up-logo 2s linear;
+  }
+  
+  #box2:hover{
+    display: hidden;
+  }
+  
+  #hovermenu{
+    display: hidden;
+  }
+  
+  #hovermenu:hover{
+    z-index: 2;
+    display: block;
+    position: absolute;
+    margin: 1.5%;
+    background-color: var(--col01);
+    border: solid 2px var(--col01);
+    width: 50px;
+    height: 50px;
+  }
+  
+  
+  /* for purple box 1 */
+  @keyframes fade-in-logo{
+  0%{
+    opacity: 0%;
+  }
+  30%{
+    opacity: 30%;
+  }
+  60%{
+    opacity: 70%;
+  }
+  100%{
+    opacity: 100%;
+  }
+  }
+  
+  
+  /* for transparent box 2 */
+  @keyframes scale-up-logo{
+    0%{
+      width: 0px;
+      height: 0px;
+    }
+    30%{
+      width: 15px;
+      height: 15px;
+    }
+    60%{
+      width: 30px;
+      height: 30px;
+    }
+    100%{
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
+  
+
+  
+    /* CURTAIN MENUN STYLING INFO TAKEN FROM HTML */
+      
+    .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: var(--col01);
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+    
+    .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      font-family: 'Prata', serif;
+      margin-top: 0px;
+    }
+    
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      font-family: 'Prata', serif;
+      color: #fcf6ff;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .overlay a:hover, .overlay a:focus {
+      color: #c146ff;
+    }
+    
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .overlay a {font-size: 20px}
+      .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+      }
+    }
+  
+  
+/* grid of image, media and content */
+.grid-images{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-auto-columns: 1fr;
+        gap: 5px 5px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          ". . ."
+          ". . ."
+          ". . .";
+          padding: 8%;
+      
+}

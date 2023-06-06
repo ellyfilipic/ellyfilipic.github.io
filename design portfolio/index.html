@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,76 +16,18 @@
 
     <title>Elly's Design portfolio</title>
 
-<!-- -------------------------------------------------------- CURTAIN MENU STYLING INFO -------------------------- -->
-    <style>
-   
-        .overlay {
-          height: 100%;
-          width: 0;
-          position: fixed;
-          z-index: 1;
-          top: 0;
-          left: 0;
-          background-color: rgb(0,0,0);
-          background-color: rgba(0,0,0, 0.97);
-          overflow-x: hidden;
-          transition: 0.5s;
-        }
-        
-        .overlay-content {
-          position: relative;
-          top: 25%;
-          width: 100%;
-          text-align: center;
-          font-family: 'Prata', serif;
-          margin-top: 0px;
-        }
-        
-        .overlay a {
-          padding: 8px;
-          text-decoration: none;
-          font-size: 36px;
-          font-family: 'Prata', serif;
-          color: #ffffff;
-          display: block;
-          transition: 0.3s;
-        }
-        
-        .overlay a:hover, .overlay a:focus {
-          color: #c146ff;
-        }
-        
-        .overlay .closebtn {
-          position: absolute;
-          top: 20px;
-          right: 45px;
-          font-size: 60px;
-        }
-        
-        @media screen and (max-height: 450px) {
-          .overlay a {font-size: 20px}
-          .overlay .closebtn {
-          font-size: 40px;
-          top: 15px;
-          right: 35px;
-          }
-        }
-        </style>
-
-<!-- ------------------------------------------------------------------------------------------------------------------------------- -->
-
-
-
-
 
 
 <body>
 
 
-    <!-- -------------------- THIS ELEMENT IS THE IMAGE THAT OPENS THE BURGER MENU IMAGE ------------------ -->
-    <span style="cursor:pointer" onclick="openNav()"><div class="fade-in">
-        <img src="img/background-burger-menu.png" height="80" width="80">
-    </div></span>
+    <!-- Box that open the curtain menu -->
+    <span style="cursor:pointer" onclick="openNav()">
+      <div id="hovermenu">
+        <div id="box1"></div>
+        <div id="box2"></div>
+      </div>
+    </span>
     
     <script>
     function openNav() {
@@ -98,33 +40,25 @@
     </script>
 
 
-<!-- --------------------------------------curtain menu INFO ---------------------------------------------- -->
+<!-- curtain menu INFO -->
     
 <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="overlay-content">
     <a href="#"><a href="index.html">Home</a></a>
-    <a href="#"><a href="2ddesign.html">2D Design</a></a>
+    <a href="#"><a href="2D art.html">2D Art</a></a>
     <a href="#">3D Design</a>
     <a href="#"><a href="soundpage.html">Sound</a></a>
     <a href="#">UI / UX</a>
-    <a href="#">Video Editing</a>
+    <a href="#">About</a>
   </div>
 </div>
 
 
+<!-- background image (logo) -->
+<img class="logo" src="img/complete-circle-logo.png">
 
-
-
-
-
-<!-- ---------------------- html and links to css animations for background - img tag for background (logo) --------------------------------- --> 
-
-<div class="fade-in">
-    <div class="scale-in-center">
-        <img class="logo" src="img/complete-circle-logo.png">
-    </div>
-</div>
+<h4>Multimedia designer | RMIT University | Melbourne, Australia</h4>
 
 
 
