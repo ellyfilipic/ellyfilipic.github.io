@@ -4,8 +4,13 @@
   --col01:#0f0e0f;
   --col02: #c95eff; 
   --col-03: #2937ff; 
-  --col-04: #fcf6ff;
+  --col-04: #fefcff;
   font-family: 'Prata', serif;
+}
+
+
+body{
+  background-color: var(--col-04);
 }
 
 h4{

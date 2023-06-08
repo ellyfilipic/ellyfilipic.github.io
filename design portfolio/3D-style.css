@@ -1,0 +1,116 @@
+
+
+:root{
+    --col01:#0f0e0f;
+    --col02: #c95eff; 
+    --col-03: #2937ff; 
+    --col-04: #fcf6ff;
+    --col-05: #eebdff;
+    font-family: 'Prata', serif;
+  }
+ 
+body{
+    background-color: var(--col-05);
+}
+  
+    /* menu icon */
+    #box1{
+      z-index: auto;
+      display: grid;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: var(--col02);
+      border: none;
+      margin: 2%;
+      animation: scale-up-logo 1.5s;
+    }
+    #box1:hover{
+      display: hidden;
+    }
+  
+  #box2{
+    z-index: 1;
+    display: grid;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px var(--col01);
+    border-style: double;
+    margin: 1%;
+    animation: scale-up-logo 2s linear;
+  }
+  
+  #box2:hover{
+    display: hidden;
+  }
+  
+  #hovermenu{
+    display: hidden;
+  }
+  
+  #hovermenu:hover{
+    z-index: 2;
+    display: block;
+    position: absolute;
+    margin: 1.5%;
+    background-color: var(--col01);
+    border: solid 2px var(--col01);
+    width: 50px;
+    height: 50px;
+  }
+
+
+
+
+   /* CURTAIN MENUN STYLING INFO TAKEN FROM HTML */
+      
+   .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--col01);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    font-family: 'Prata', serif;
+    margin-top: 0px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    font-family: 'Prata', serif;
+    color: #fcf6ff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #c146ff;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+
+
+.sketchfab-embed-wrapper{
+padding-left: 25%;
+padding-top: 5%;
+}
