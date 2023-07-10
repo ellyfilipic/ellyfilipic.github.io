@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<link rel="stylesheet" href="stylefor2D.css">   
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+
+<head>
+
+
+
+    <title>2D Art</title>
+
+
+</head>
+
+<body>
+  <!-- Box that open the curtain menu -->
+  <span style="cursor:pointer" onclick="openNav()">
+    <div id="hovermenu">
+      <div id="box1"></div>
+      <div id="box2"></div>
+    </div>
+  </span>
+  
+  <script>
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+  </script>
+
+
+<!-- curtain menu INFO -->
+  
+<div id="myNav" class="overlay">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<div class="overlay-content">
+  <a href="#"><a href="index.html">Home</a></a>
+  <a href="#"><a href="2D art.html">2D Art</a></a>
+  <a href="#"><a href="3Ddesign.html">3D Design</a></a>
+  <a href="#"><a href="soundpage.html">Sound</a></a>
+  <a href="#">UI / UX</a>
+  <a href="#">LinkTree</a>
+</div>
+</div>
+
+
+<h1>2D Illustrations</h1>
+<!-- portfolio page content images, media and links -->
+<div class="grid-images">
+
+  <!-- joker -->
+  <div class="overlay-container">
+    <div class="overlay-info">The Joker</div>
+
+    <img class="joker" src="img/joker.jpg" alt="Digital Illustration Portrait of the Joker" width="380" height="250">
+  </div>
+<script>
+  function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
+
+
+<!-- ashoka -->
+  <img class="ashoka" src="img/ahsoka tano fan art.jpg" alt="Digital Illustration Portrait of Ashoka Tano (Fan art)" width="250" height="290">
+
+<!-- Loki -->
+<img src="img/loki for figma.jpg" alt="Digital Fan Art of Portrait of Loki" width="300" height="300"  style="border: solid 2px #fcf6ff; border-radius: 30px; box-shadow: 20px 20px 2px;">
+
+  <img src="img/Thanos for figma.jpg" alt="Digital Fan Art: Thanos" width="450" height="320"  style="border: solid 2px #fcf6ff; border-radius: 30px; box-shadow: 20px 20px 2px;">
+  <img src="img/van goghs sunflowers for portfolio.jpg" alt="Digital Illustration inspired by The Sunflowers (van Gogh, 1888)" width="230" height="280" style="margin-left: 40px; border: solid 2px #fcf6ff; border-radius: 30px; box-shadow: 20px 20px 2px;">
+  <img src="img/icons.jpeg" alt="Suite of flat design icons" width="290" height="310" style="border: solid 2px #fcf6ff; border-radius: 30px; box-shadow: 20px 20px 2px;">
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
